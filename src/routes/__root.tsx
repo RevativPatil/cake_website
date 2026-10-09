@@ -8,7 +8,7 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import { Toaster } from "@/components/ui/sonner";
 import appCss from "../styles.css?url";
@@ -75,56 +75,54 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "The Cake Vault | Best Cake Shop & Bakery in Pune | Custom & Eggless Cakes" },
+      { title: "Cake Crafts – Customised Cake Studio | Kharadi, Pune | Top-Rated Cake Studio" },
       {
         name: "description",
         content:
-          "Top-rated bakery & cake shop in Pune with 5 verified locations (Lohegaon Rd / Dhanori, Old Mundhwa Rd, Pimpri-Chinchwad, Ganesh Park, Santosh Mangal Karyalay). Order fresh 100% eggless cakes, custom birthday cakes, rasmalai cakes & same-day delivery. Rated 4.9⭐ by 332+ happy customers.",
+          "Cake Crafts is a premier customised cake studio in Kharadi, Pune (Shop No. 2, Alcon Rethos, EON Free Zone Road). Specialising in designer birthday cakes, walnut brownies, chocolate truffle cakes & eggless creations. Rated 4.9⭐ on Google.",
       },
       {
         name: "keywords",
         content:
-          "cake shop in pune, bakery in pune, best cake shop lohegaon, cake delivery mundhwa, cake vault pimpri chinchwad, custom birthday cakes pune, eggless cakes pune, rasmalai cake pune, red velvet cake, same day cake delivery pune, cake shop near me, designer cakes pune",
+          "cake crafts kharadi, customised cake studio pune, cake shop kharadi, designer cakes kharadi, eggless cakes pune, walnut brownie kharadi, chocolate truffle cake pune, cake delivery kharadi eon free zone",
       },
-      { name: "author", content: "The Cake Vault" },
+      { name: "author", content: "Cake Crafts – Customised Cake Studio" },
       {
         name: "robots",
         content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
       { name: "googlebot", content: "index, follow" },
       { name: "geo.region", content: "IN-MH" },
-      { name: "geo.placename", content: "Pune, Maharashtra, India" },
-      { name: "geo.position", content: "18.5204303;73.8567437" },
-      { name: "ICBM", content: "18.5204303, 73.8567437" },
-      { property: "og:site_name", content: "The Cake Vault" },
+      { name: "geo.placename", content: "Kharadi, Pune, Maharashtra, India" },
+      { name: "geo.position", content: "18.5530;73.9412" },
+      { name: "ICBM", content: "18.5530, 73.9412" },
+      { property: "og:site_name", content: "Cake Crafts – Customised Cake Studio" },
       { property: "og:locale", content: "en_IN" },
       {
         property: "og:title",
-        content: "The Cake Vault | Best Cake Shop & Bakery in Pune | Custom & Eggless Cakes",
+        content: "Cake Crafts – Customised Cake Studio | Kharadi, Pune",
       },
       {
         property: "og:description",
         content:
-          "Top-rated bakery with 5 verified locations across Pune & Pimpri-Chinchwad. Fresh eggless cakes, rasmalai cakes, custom birthday designs & same-day delivery.",
+          "Customised cake studio in Kharadi, Pune. Shop No. 2, Alcon Rethos, EON Free Zone Road. Rated 4.9⭐ on Google Business Profile.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://thecakevault.in" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "The Cake Vault | Best Cake Shop & Bakery in Pune" },
+      { name: "twitter:title", content: "Cake Crafts – Customised Cake Studio | Kharadi, Pune" },
       {
         name: "twitter:description",
         content:
-          "Fresh eggless cakes, rasmalai cakes & custom designer birthday cakes. 5 verified store locations across Pune.",
+          "Customised cakes, walnut brownies & eggless creations in Kharadi, Pune. Rated 4.9⭐ on Google Business Profile.",
       },
     ],
     links: [
-      { rel: "canonical", href: "https://thecakevault.in" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
@@ -154,7 +152,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
       <Toaster position="bottom-right" />
     </QueryClientProvider>

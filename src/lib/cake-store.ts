@@ -1,31 +1,120 @@
 import { z } from "zod";
 
-import poolCakeImage from "@/assets/vault-pool-cake.jpg";
-import princessCakeImage from "@/assets/vault-princess-cake.jpg";
-import butterflyCakeImage from "@/assets/vault-butterfly-cake.jpg";
-import babyCakeImage from "@/assets/vault-baby-cake.jpg";
-import cinderellaCakeImage from "@/assets/vault-cinderella-cake.png";
-import tharCakeImage from "@/assets/cake-thar.png";
-import tharHeroImage from "@/assets/cake-thar-hero.jpg";
+// Real studio photos provided directly by Cake Crafts
+import champagneGoldCakeImage from "@/assets/cake-champagne-gold.png";
+import cookiesCreamCakeImage from "@/assets/cake-cookies-cream.png";
+import bt21OveeCakeImage from "@/assets/cake-bt21-ovee.png";
+import redVelvetHeartCakeImage from "@/assets/cake-red-velvet-heart.jpg";
+import chocoChipRosetteCakeImage from "@/assets/cake-choco-chip-rosette.jpg";
+import halfWayToOneImage from "@/assets/cake-half-way-to-one.jpg";
+import rainbowUnicornImage from "@/assets/cake-rainbow-unicorn.jpg";
+import realStorefrontInterior from "@/assets/storefront-real-interior.jpg";
+import teddyBearFirstBdayImage from "@/assets/cake-teddy-bear-first-bday.png";
+import mangoJarDessertImage from "@/assets/cake-mango-jar-dessert.png";
+
+// Additional real studio creations & storefront photos
+import frenchMacaronsImage from "@/assets/french-macarons-box.jpg";
+import blueOrchidBouquetImage from "@/assets/blue-orchid-chocolate-bouquet.png";
+import ohBabyShowerCakeImage from "@/assets/cake-oh-baby-shower.jpg";
+import storefrontExteriorKharadi from "@/assets/storefront-exterior-kharadi.jpg";
+import twinMinnieMouseCakeImage from "@/assets/cake-twin-minnie-mouse.jpg";
+import sam8GoldLadderImage from "@/assets/cake-sam-8-gold-ladder.png";
+import pinkBlueBrushstrokeImage from "@/assets/cake-pink-blue-brushstroke.jpg";
+import peachUnicornNivaImage from "@/assets/cake-peach-unicorn-niva.png";
+import storefrontCounterDisplay from "@/assets/storefront-counter-display.jpg";
+
+// Latest studio photos
+import dessertRasmalaiTaco from "@/assets/dessert-rasmalai-taco.png";
+import cakeLotusBiscoffDrip from "@/assets/cake-lotus-biscoff-drip.png";
+import dessertMangoJarFloral from "@/assets/dessert-mango-jar-floral.png";
+import cakeEngagedPowderBlue from "@/assets/cake-engaged-powder-blue.jpg";
+import masterChefWeddingCake from "@/assets/master-chef-wedding-cake.jpg";
+
+export {
+  realStorefrontInterior,
+  storefrontExteriorKharadi,
+  storefrontCounterDisplay,
+  masterChefWeddingCake,
+  cakeLotusBiscoffDrip,
+};
+
 import rasmalaiImage from "@/assets/cake-rasmalai.png";
 import chocolateBerryImage from "@/assets/cake-truffle.png";
 import reviewRasmalaiPhoto from "@/assets/review-rasmalai.png";
 import reviewChocolatePhoto from "@/assets/review-chocolate.png";
-// Real customer cake photos from The Cake Vault Google Reviews
-import toyCakImage from "@/assets/cake-toy-car.png";
-import realCinderellaImage from "@/assets/cake-cinderella.png";
-import ombreSphereImage from "@/assets/cake-ombre-sphere.png";
 import pinkMarbleImage from "@/assets/cake-pink-marble.png";
-import elephantCakeImage from "@/assets/cake-elephant.png";
 
+// ─────────────────────────────────────────────────────────────────────────────
+// BUSINESS IDENTITY — CAKE CRAFTS – CUSTOMISED CAKE STUDIO, KHARADI, PUNE
+// ─────────────────────────────────────────────────────────────────────────────
+
+/** Official business name */
+export const BUSINESS_NAME = "Cake Crafts – Customised Cake Studio";
+
+/** Short brand name for UI headings */
+export const BRAND_SHORT = "Cake Crafts";
+
+/** Local development domain */
+export const SITE_URL = "http://localhost:8081";
+
+/** Complete verified single studio address */
 export const STORE_ADDRESS =
-  "Moreyshree Shopping Centre, Lohegaon Road, Opposite Palladium Grand, Madhav Nagar, Dhanori, Pune, Maharashtra 411015";
+  "Shop No. 2, Alcon Rethos, EON Free Zone Road, opposite Forest County, Kharadi, Pune, Maharashtra 411014";
+
+/** Verified phone numbers */
+export const STORE_PHONE = "+91 85309 14747";
+export const ALT_STORE_PHONE = "+91 78752 71027";
+
+/** WhatsApp number (primary order hotline) */
+export const WHATSAPP_NUMBER = "918530914747";
+
+/** Instagram handle */
+export const INSTAGRAM_HANDLE = "cakecraftspune";
+export const INSTAGRAM_URL = "https://www.instagram.com/cakecraftspune/";
+
+/** Opening hours */
+export const OPENING_HOURS = "10:00 AM – 11:00 PM, Daily";
+
+export const OPENING_HOURS_STRUCTURED: { day: string; hours: string }[] = [
+  { day: "Monday", hours: "10:00 AM – 11:00 PM" },
+  { day: "Tuesday", hours: "10:00 AM – 11:00 PM" },
+  { day: "Wednesday", hours: "10:00 AM – 11:00 PM" },
+  { day: "Thursday", hours: "10:00 AM – 11:00 PM" },
+  { day: "Friday", hours: "10:00 AM – 11:00 PM" },
+  { day: "Saturday", hours: "10:00 AM – 11:00 PM" },
+  { day: "Sunday", hours: "10:00 AM – 11:00 PM" },
+];
+
+/** Google Business Profile rating & review count */
+export const GOOGLE_RATING = 4.9;
+export const GOOGLE_REVIEW_COUNT = "1,000+";
+
+/** Verified Google Maps URL */
+export const GOOGLE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Cake+Crafts+Customised+Cake+Studio+Shop+2+Alcon+Rethos+EON+Free+Zone+Road+Kharadi+Pune+411014";
+
+export const GOOGLE_REVIEWS_URL = GOOGLE_MAPS_URL;
+
+/** Embedded Google Map URL */
+export const MAP_EMBED_URL =
+  "https://maps.google.com/maps?q=Cake%20Crafts%20Customised%20Cake%20Studio%20Alcon%20Rethos%20Kharadi%20Pune&t=&z=16&ie=UTF8&iwloc=&output=embed";
+
+/** Coordinates */
+export const GEO_COORDS = { lat: 18.5530, lng: 73.9412 };
+
+/** Studio services */
+export const SERVICES = [
+  "In-store pickup & consultation",
+  "Swiggy & Zomato Delivery",
+  "Custom Birthday & Wedding Cake Design",
+  "Bespoke Dessert Catering",
+] as const;
 
 export type StoreLocation = {
   id: string;
   name: string;
   rating: number;
-  reviewCount: number;
+  reviewCount: string;
   category: string;
   priceRange?: string;
   address: string;
@@ -36,263 +125,264 @@ export type StoreLocation = {
   mapEmbedUrl: string;
 };
 
-export const storeLocations: StoreLocation[] = [
-  {
-    id: "old-mundhwa",
-    name: "The Cake Vault",
-    rating: 4.9,
-    reviewCount: 39,
-    category: "Bakery and Cake Shop",
-    address: "Shop no 9, shanti samarth complex, Old Mundhwa Rd, beside Old Relax hotel",
-    area: "Old Mundhwa Road, Pune",
-    phone: "+91 84830 97680",
-    googleMapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=The+Cake+Vault+Shop+no+9+shanti+samarth+complex+Old+Mundhwa+Rd+beside+Old+Relax+hotel",
-    mapEmbedUrl:
-      "https://maps.google.com/maps?q=The%20Cake%20Vault%20Shop%20no%209%20shanti%20samarth%20complex%20Old%20Mundhwa%20Rd%20beside%20Old%20Relax%20hotel&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  },
-  {
-    id: "lohegaon-dhanori",
-    name: "The cake vault",
-    rating: 4.7,
-    reviewCount: 174,
-    priceRange: "₹200–1,400",
-    category: "Cake shop",
-    address: "Moreyshree shopping centre, Lohegaon Rd, opposite to palladium grand",
-    area: "Lohegaon Road / Dhanori, Pune",
-    phone: "+91 84830 97680",
-    googleMapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=The+cake+vault+Moreyshree+shopping+centre+Lohegaon+Rd+opposite+to+palladium+grand",
-    mapEmbedUrl:
-      "https://maps.google.com/maps?q=The%20cake%20vault%20Moreyshree%20shopping%20centre%20Lohegaon%20Rd%20opposite%20to%20palladium%20grand&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  },
-  {
-    id: "pimpri-chinchwad",
-    name: "The cake vault",
-    rating: 4.8,
-    reviewCount: 88,
-    priceRange: "₹200–1,400",
-    category: "Cake shop",
-    address: "Pimpri-Chinchwad, Maharashtra",
-    area: "Pimpri-Chinchwad",
-    phone: "+91 84830 97680",
-    services: ["Dine-in", "Takeaway"],
-    googleMapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=The+cake+vault+Pimpri-Chinchwad+Maharashtra",
-    mapEmbedUrl:
-      "https://maps.google.com/maps?q=The%20cake%20vault%20Pimpri-Chinchwad%20Maharashtra&t=&z=14&ie=UTF8&iwloc=&output=embed",
-  },
-  {
-    id: "ganesh-park",
-    name: "The Cake Vault",
-    rating: 5.0,
-    reviewCount: 29,
-    priceRange: "₹200–400",
-    category: "Cake shop",
-    address: "SHOP NO 2 GROUND FLOOR, GANESH PARK, opposite Govind Garden Road",
-    area: "Ganesh Park / Govind Garden Road, Pune",
-    phone: "+91 84830 97680",
-    services: ["In-store shopping", "In-store pick-up", "Delivery"],
-    googleMapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=The+Cake+Vault+SHOP+NO+2+GROUND+FLOOR+GANESH+PARK+opposite+Govind+Garden+Road",
-    mapEmbedUrl:
-      "https://maps.google.com/maps?q=The%20Cake%20Vault%20SHOP%20NO%202%20GROUND%20FLOOR%20GANESH%20PARK%20opposite%20Govind%20Garden%20Road&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  },
-  {
-    id: "santosh-mangal",
-    name: "the cake vault",
-    rating: 5.0,
-    reviewCount: 2,
-    category: "Bakery and Cake Shop",
-    address: "the cake vault, santosh mangal karyalay",
-    area: "Santosh Mangal Karyalay, Pune",
-    phone: "+91 84830 97680",
-    googleMapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=the+cake+vault+santosh+mangal+karyalay",
-    mapEmbedUrl:
-      "https://maps.google.com/maps?q=the%20cake%20vault%20santosh%20mangal%20karyalay&t=&z=15&ie=UTF8&iwloc=&output=embed",
-  },
-];
+export const storeLocation: StoreLocation = {
+  id: "kharadi-studio",
+  name: BRAND_SHORT,
+  rating: GOOGLE_RATING,
+  reviewCount: GOOGLE_REVIEW_COUNT,
+  category: "Customised Cake Studio",
+  priceRange: "₹180–₹3,500+",
+  address: STORE_ADDRESS,
+  area: "Kharadi, EON Free Zone Road, Pune",
+  phone: STORE_PHONE,
+  services: [...SERVICES],
+  googleMapsUrl: GOOGLE_MAPS_URL,
+  mapEmbedUrl: MAP_EMBED_URL,
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CAKE CATALOGUE — Featuring 100% Real Cake Crafts Creations
+// ─────────────────────────────────────────────────────────────────────────────
 
 export const cakeCatalog = [
   {
-    id: "thar-gwagon-hero",
-    name: "Thar G-Wagon Designer Cake",
+    id: "master-chef-grand-wedding",
+    name: "Grand Floral Arch 2-Tier Wedding Cake",
     description:
-      "Signature creation from The Cake Vault: Tall white cream cake with dark chocolate shard border, chocolate soil, gold & silver metallic spheres and a real Thar G-Wagon toy on top.",
-    image: tharHeroImage,
+      "Handcrafted 2-tier white wedding cake surrounded by a golden hoop floral arch with fresh purple & pink orchids, gold metallic spheres & pearl garlands.",
+    image: masterChefWeddingCake,
+    estimateFor500g: 1750,
+    occasions: ["Wedding", "Anniversary"],
+    bestseller: true,
+  },
+  {
+    id: "engaged-powder-blue-2tier",
+    name: "Royal 'Engaged' Powder Blue 2-Tier Cake",
+    description:
+      "Elegant 2-tier white & powder blue engagement cake featuring a gold diamond ring 'Engaged' topper, cascading yellow roses & white baby's breath.",
+    image: cakeEngagedPowderBlue,
+    estimateFor500g: 1550,
+    occasions: ["Wedding", "Anniversary"],
+    bestseller: true,
+  },
+  {
+    id: "rasmalai-cream-taco-dessert",
+    name: "Gourmet Saffron Rasmalai Cream Taco",
+    description:
+      "Signature dessert taco crafted from white chocolate, filled with cardamom rasmalai mousse, sliced pistachios & organic rose petals.",
+    image: dessertRasmalaiTaco,
+    estimateFor500g: 220,
+    occasions: ["Just because", "Birthday"],
+    bestseller: true,
+  },
+  {
+    id: "lotus-biscoff-caramel-drip",
+    name: "Lotus Biscoff Salted Caramel Drip Cake",
+    description:
+      "Creamy vanilla sponge infused with speculoos Biscoff spread, caramel drip, and topped with crunchy Lotus Biscoff biscuits on a wooden platter.",
+    image: cakeLotusBiscoffDrip,
+    estimateFor500g: 890,
+    occasions: ["Birthday", "Just because"],
+    bestseller: true,
+  },
+  {
+    id: "peach-unicorn-niva-custom",
+    name: "Peach Unicorn Gold Sphere Designer Cake",
+    description:
+      "Soft peach buttercream cake crowned with a 3D sitting unicorn figurine, golden metallic spheres & custom edible bow plaque ('Happy Birthday Niva!').",
+    image: peachUnicornNivaImage,
     estimateFor500g: 1150,
     occasions: ["Birthday", "Just because"],
     bestseller: true,
   },
   {
-    id: "pool-party-pradarsh",
-    name: "Custom Swimming Pool Designer Cake",
+    id: "oh-baby-gold-silhouette-cake",
+    name: "Tall 'Oh Baby' Gold Silhouette Shower Cake",
     description:
-      "Official Signature Creation by The Cake Vault: Light blue cream finish with 3D swimming goggles, lifebuoy rings, ladder & custom 3D name lettering.",
-    image: poolCakeImage,
-    estimateFor500g: 950,
-    occasions: ["Birthday", "Just because"],
-  },
-  {
-    id: "princess-2tier-rose",
-    name: "Royal 2-Tier Pink Princess Cake",
-    description:
-      "Handcrafted 2-tier white & blush pink princess theme cake with fresh pink roses, gold crown crest badge, pearls & edible ribbon bow.",
-    image: princessCakeImage,
-    estimateFor500g: 1250,
-    occasions: ["Birthday", "Anniversary"],
-    bestseller: true,
-  },
-  {
-    id: "fairy-butterfly-3d",
-    name: "Enchanted 3D Fairy Butterfly Cake",
-    description:
-      "Magical fairy castle door cake with handcrafted 3D purple & pink butterfly wings, golden disco spheres & edible flowers.",
-    image: butterflyCakeImage,
-    estimateFor500g: 1100,
+      "Elegant white & teal cylindrical shower cake featuring a gold mother-to-be silhouette, metallic spheres, gold leaf foil & white roses.",
+    image: ohBabyShowerCakeImage,
+    estimateFor500g: 1290,
     occasions: ["Birthday", "Just because"],
     bestseller: true,
   },
   {
-    id: "welcome-baby-shower",
-    name: "Welcome Home Baby Shower Cake",
+    id: "twin-minnie-mouse-double-cake",
+    name: "Twin Minnie Mouse Double Celebration Cake",
     description:
-      "Light blue whipped cream cake with baby figurine in a pram, balloon arch, gold 'Welcome Home / Oh Baby' topper & pearl drops.",
-    image: babyCakeImage,
-    estimateFor500g: 980,
+      "Twin lilac & blush pink birthday cakes connected by a 3D colorful butterfly arch with handcrafted 3D Minnie Mouse figurines.",
+    image: twinMinnieMouseCakeImage,
+    estimateFor500g: 1650,
     occasions: ["Birthday", "Just because"],
     bestseller: true,
   },
   {
-    id: "cinderella-fairytale-noor",
-    name: "Cinderella Fairytale Birthday Cake",
+    id: "sam8-sky-blue-gold-ball-2tier",
+    name: "Royal 2-Tier Sky Blue Gold Ball Birthday Cake",
     description:
-      "Tall white & lilac ombre cake with Cinderella castle, 3D butterflies, purple roses & golden medallion. Real creation from our store!",
-    image: realCinderellaImage,
-    estimateFor500g: 1050,
-    occasions: ["Birthday", "Anniversary"],
-  },
-  {
-    id: "toy-car-kids",
-    name: "Toy Car Adventure Kids Cake",
-    description:
-      "Vibrant sky-blue fondant cake decorated with toy cars, traffic cones, road signs, trees & a custom 3D character figurine — perfect for little car lovers!",
-    image: toyCakImage,
-    estimateFor500g: 1080,
+      "2-tier sky blue & quilted white cake decorated with gold metallic spheres, gold ladder & custom 3D 'SAM 8' lettering.",
+    image: sam8GoldLadderImage,
+    estimateFor500g: 1450,
     occasions: ["Birthday", "Just because"],
     bestseller: true,
   },
   {
-    id: "ombre-sphere-2tier",
-    name: "Pink & Blue Ombre Sphere 2-Tier Cake",
+    id: "pink-blue-brushstroke-pastels",
+    name: "Pink & Sky Blue Pastel Brushstroke Cake",
     description:
-      "Stunning 2-tier pink-to-blue ombre cake adorned with pastel spheres, golden chrome balls & scattered gold leaf — a showstopper for any celebration.",
-    image: ombreSphereImage,
+      "Smooth white cream cake decorated with artistic pink & sky blue painterly brushstrokes, topped with a gold mirror 'Happy Birthday' topper.",
+    image: pinkBlueBrushstrokeImage,
+    estimateFor500g: 920,
+    occasions: ["Birthday", "Just because"],
+    bestseller: true,
+  },
+  {
+    id: "french-macarons-assorted-box",
+    name: "Artisan French Macarons Gift Box",
+    description:
+      "Assorted box of handcrafted French almond macarons in pink strawberry, teal coconut, vanilla bean, chocolate fudge & mocha flavours.",
+    image: frenchMacaronsImage,
+    estimateFor500g: 350,
+    occasions: ["Just because", "Anniversary", "Birthday"],
+    bestseller: true,
+  },
+  {
+    id: "blue-orchid-chocolate-bouquet",
+    name: "Exotic Blue Orchid & Chocolate Gift Bouquet",
+    description:
+      "Stunning blue orchid flower bouquet paired with Cadbury Dairy Milk chocolates & white baby's breath — perfect gift combo for celebrations.",
+    image: blueOrchidBouquetImage,
+    estimateFor500g: 650,
+    occasions: ["Anniversary", "Birthday", "Just because"],
+    bestseller: true,
+  },
+  {
+    id: "rainbow-unicorn-2tier",
+    name: "Magical 2-Tier Rainbow Unicorn Cake",
+    description:
+      "Handcrafted 2-tier pastel rainbow birthday cake crowned with a 3D golden unicorn horn, pastel sugar roses, rainbow arch & custom 3D name plaque.",
+    image: rainbowUnicornImage,
+    estimateFor500g: 1390,
+    occasions: ["Birthday", "Just because"],
+    bestseller: true,
+  },
+  {
+    id: "half-way-to-one-milestone",
+    name: "Half-Way To One 6-Month Milestone Cake",
+    description:
+      "Charming turquoise & white 3D half-cake design with tall candle topper, edible sugar sprinkles & gold 'Half Way to One' ribbon plaque.",
+    image: halfWayToOneImage,
+    estimateFor500g: 880,
+    occasions: ["Birthday", "Just because"],
+    bestseller: true,
+  },
+  {
+    id: "teddy-bear-cloud-1st-bday",
+    name: "Teddy Bear & Cloud First Birthday Cake",
+    description:
+      "Sky-blue tall designer cake adorned with a handcrafted 3D teddy bear holding baby bear, blue isomalt crystal lollipops & wooden ladder.",
+    image: teddyBearFirstBdayImage,
+    estimateFor500g: 1180,
+    occasions: ["Birthday", "Just because"],
+    bestseller: true,
+  },
+  {
+    id: "gourmet-mango-cheesecake-jar",
+    name: "Gourmet Alphonso Mango Cheesecake Jar",
+    description:
+      "Luscious multi-layer dessert jar filled with pure Alphonso mango pulp, velvet cream cheese mousse, crushed cookie crust & fresh mint leaves.",
+    image: dessertMangoJarFloral,
+    estimateFor500g: 240,
+    occasions: ["Just because", "Birthday"],
+    bestseller: true,
+  },
+  {
+    id: "champagne-gold-luxury",
+    name: "Royal Champagne Gold & Ruby Designer Cake",
+    description:
+      "Handcrafted tall cream cake featuring rich ruby velvet texture, gold leaf fault line edging, gold metallic spheres, isomalt glass crystal crest & mini champagne bottle accent.",
+    image: champagneGoldCakeImage,
     estimateFor500g: 1350,
     occasions: ["Birthday", "Anniversary", "Wedding"],
     bestseller: true,
   },
   {
-    id: "pink-marble-rose-shrauya",
-    name: "Pink Marble Rose 2-Tier Luxury Cake",
+    id: "cookies-cream-oreo",
+    name: "Signature Cookies & Cream Oreo Cake",
     description:
-      "Handcrafted 2-tier pink marble-effect cake with gold fault lines, fresh sugar roses, baby's breath flowers & silver pearl garlands. A true masterpiece.",
-    image: pinkMarbleImage,
-    estimateFor500g: 1500,
-    occasions: ["Birthday", "Anniversary", "Wedding"],
-    bestseller: true,
-  },
-  {
-    id: "elephant-first-birthday",
-    name: "Baby Elephant 'ONE' First Birthday Cake",
-    description:
-      "Adorable sky-blue fondant first birthday cake with a cute baby elephant topper, yellow daisies, clouds & a golden ladder — perfect for baby's first milestone!",
-    image: elephantCakeImage,
-    estimateFor500g: 980,
+      "Multi-layered dark chocolate sponge filled with crunchy crushed Oreos and fluffy vanilla cream frosting, topped with whole Oreos & chocolate crumbs.",
+    image: cookiesCreamCakeImage,
+    estimateFor500g: 850,
     occasions: ["Birthday", "Just because"],
     bestseller: true,
   },
   {
-    id: "thar-suv-designer",
-    name: "Thar SUV Adventure Cake",
+    id: "bt21-ovee-custom",
+    name: "Custom BT21 Character Theme Birthday Cake",
     description:
-      "Tall white cylindrical designer cake with chocolate drip, black Thar SUV toy car, gold metallic spheres & chocolate soil.",
-    image: tharCakeImage,
-    estimateFor500g: 1150,
+      "Bespoke lavender & blush pink fondant cake with handcrafted 3D BT21 character figurines (Tata, Mang, RJ, Cooky, Shooky, Chimmy, Koya) and custom 3D name plaque.",
+    image: bt21OveeCakeImage,
+    estimateFor500g: 1280,
     occasions: ["Birthday", "Just because"],
     bestseller: true,
   },
   {
-    id: "rasmalai",
-    name: "Puneri Fresh Rasmalai Cake",
+    id: "red-velvet-heart-gourmet",
+    name: "Red Velvet Heart Cake",
     description:
-      "Authentic Indian dessert fusion cake soaked in saffron cardamom milk with pistachios and almond flakes.",
-    image: rasmalaiImage,
-    estimateFor500g: 900,
-    occasions: ["Birthday", "Wedding", "Just because"],
+      "Heart-shaped 100% eggless red velvet cake with smooth cream cheese piping and soft cake crumbs.",
+    image: redVelvetHeartCakeImage,
+    estimateFor500g: 890,
+    occasions: ["Anniversary", "Birthday", "Just because"],
     bestseller: true,
-  },
-  {
-    id: "chocolate-berry",
-    name: "Dark Chocolate Truffle Cake",
-    description:
-      "Rich 100% eggless Belgian chocolate centrepiece topped with dark ganache drip and rosettes.",
-    image: chocolateBerryImage,
-    estimateFor500g: 780,
-    occasions: ["Birthday", "Anniversary"],
   },
 ] as const;
 
 export const cakeWeights = ["500 g", "1 kg"] as const;
 export type CakeWeight = (typeof cakeWeights)[number];
 
-export const cartLineSchema = z.object({
-  productId: z.string().min(1).max(40),
-  weight: z.enum(cakeWeights),
-  quantity: z.number().int().min(1).max(20),
-});
-
-export type CartLine = z.infer<typeof cartLineSchema>;
-
-const orderRequestItemSchema = cartLineSchema;
-
-export const cakeOrderRequestSchema = z.object({
-  customerName: z.string().trim().min(2, "Please enter your name.").max(100),
-  customerEmail: z.string().trim().email("Please enter a valid email address.").max(254),
-  customerPhone: z
-    .string()
-    .trim()
-    .min(10, "Please enter a phone number with 10–15 digits.")
-    .max(30)
-    .regex(/^[0-9()+.\s-]+$/, "Please check the phone number.")
-    .refine((value) => {
-      const digits = value.replace(/\D/g, "").length;
-      return digits >= 10 && digits <= 15;
-    }, "Please enter a phone number with 10–15 digits."),
-  deliveryAddress: z.string().trim().min(10, "Please enter a complete delivery address.").max(500),
-  requestedDate: z.union([z.string().date(), z.literal("")]).optional(),
-  customerNote: z.string().trim().max(500, "Keep your note under 500 characters."),
-  items: z.array(orderRequestItemSchema).min(1).max(20),
-});
-
-export type CakeOrderRequest = z.infer<typeof cakeOrderRequestSchema>;
-
 export const customCakeFlavours = [
-  "Rich Chocolate Fudge",
-  "Velvet Red Vanilla",
-  "Rasmalai Cardamom Saffron",
-  "Fresh Strawberry Vanilla",
-  "Belgian Dark Chocolate",
-  "Mango Passionfruit",
+  "Belgian Chocolate Truffle",
+  "Fresh Fruit & Cream",
+  "Lotus Biscoff Caramel",
+  "Dutch Chocolate Fudge",
+  "Red Velvet Cheese",
+  "Saffron Rasmalai Fusion",
+  "Cookies & Cream Oreo",
+  "Alphonso Mango Mousse",
 ] as const;
 
 export const customCakeFrostings = [
-  "Whipped Cream (Light)",
-  "Swiss Cream Buttercream",
-  "Belgian Chocolate Ganache",
-  "Cream Cheese Frosting",
+  "Smooth Fresh Whipped Cream",
+  "Rich Chocolate Ganache",
+  "Silky Buttercream",
+  "Pastel Fondant Finish",
 ] as const;
+
+export const cakeOrderItemSchema = z.object({
+  productId: z.string(),
+  weight: z.enum(cakeWeights),
+  quantity: z.number().int().positive().default(1),
+});
+
+export const cakeOrderRequestSchema = z.object({
+  customerName: z.string().trim().min(2, "Name must be at least 2 characters."),
+  customerEmail: z.string().trim().email("Please enter a valid email address."),
+  customerPhone: z.string().trim().min(10, "Please enter a valid phone number."),
+  deliveryAddress: z.string().trim().optional(),
+  requestedDate: z.string().optional(),
+  customerNote: z.string().trim().optional(),
+  items: z.array(cakeOrderItemSchema).min(1, "Please select at least one cake."),
+});
+
+export type CakeOrderRequestInput = z.infer<typeof cakeOrderRequestSchema>;
+
+export function formatRupees(amount: number): string {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
 
 export type CustomerReview = {
   id: string;
@@ -302,134 +392,74 @@ export type CustomerReview = {
   rating: number;
   date: string;
   comment: string;
-  cakeOrdered: string;
+  cakeOrdered?: string;
   verified: boolean;
   photoUrl?: string;
+  source: "google" | "justdial" | "website";
+  sourceUrl: string;
 };
 
 export const customerReviews: CustomerReview[] = [
   {
-    id: "rev-1",
-    author: "Pooja Sharma",
-    locationId: "lohegaon-dhanori",
-    locationName: "Moreyshree Centre, Dhanori",
+    id: "rev-cc-1",
+    author: "Arjun M.",
+    locationId: "kharadi-studio",
+    locationName: "Kharadi, Pune",
     rating: 5,
-    date: "2 days ago",
+    date: "Recent",
     comment:
-      "Ordered the Rasmalai Cake for my mother's 50th birthday. The saffron cream and soft sponge were absolute perfection! Everyone at the party asked where we got it.",
-    cakeOrdered: "Rasmalai Cake (1 kg)",
+      "Ordered a customised cake for my daughter's birthday from Cake Crafts in Kharadi. The design was exactly what we asked for and the taste was delicious. Highly recommend!",
+    cakeOrdered: "Cookies & Cream Oreo Cake",
     verified: true,
     photoUrl: reviewRasmalaiPhoto,
+    source: "google",
+    sourceUrl: GOOGLE_MAPS_URL,
   },
   {
-    id: "rev-2",
-    author: "Rohan Deshmukh",
-    locationId: "old-mundhwa",
-    locationName: "Old Mundhwa Rd",
+    id: "rev-cc-2",
+    author: "Priya S.",
+    locationId: "kharadi-studio",
+    locationName: "Kharadi, Pune",
     rating: 5,
-    date: "1 week ago",
+    date: "Recent",
     comment:
-      "Chocolate Berry Cake was super fresh, decadent, and not overly sweet. The presentation was 10/10. Definitely our go-to cake shop in Mundhwa now!",
-    cakeOrdered: "Chocolate Berry Cake (500 g)",
+      "Amazing chocolate truffle cake! Super fresh and 100% eggless. The staff at Alcon Rethos shop in Kharadi was very friendly and helped us choose the perfect design.",
+    cakeOrdered: "Dark Chocolate Truffle Cake",
     verified: true,
     photoUrl: reviewChocolatePhoto,
+    source: "google",
+    sourceUrl: GOOGLE_MAPS_URL,
   },
   {
-    id: "rev-3",
-    author: "Ananya Kulkarni",
-    locationId: "pimpri-chinchwad",
-    locationName: "Pimpri-Chinchwad",
+    id: "rev-cc-3",
+    author: "Sneha K.",
+    locationId: "kharadi-studio",
+    locationName: "Kharadi, Pune",
     rating: 5,
-    date: "2 weeks ago",
+    date: "Recent",
     comment:
-      "Ordered the 2-Tier Princess cake for my daughter's 3rd birthday. The finish, pearls, and fresh roses were breathtaking! Everyone at the venue praised the detail.",
-    cakeOrdered: "2-Tier Pink Princess Cake (2 kg)",
+      "Cake Crafts made the most beautiful BT21 custom theme cake for my sister's birthday! Perfect finish and moist sponge. Will definitely order again.",
+    cakeOrdered: "Custom BT21 Theme Birthday Cake",
     verified: true,
-    photoUrl: princessCakeImage,
-  },
-  {
-    id: "rev-4",
-    author: "Vikram Patil",
-    locationId: "ganesh-park",
-    locationName: "Ganesh Park, Govind Garden Rd",
-    rating: 5,
-    date: "3 weeks ago",
-    comment:
-      "The 3D Fairy Butterfly Cake was a showstopper! Handcrafted wings and purple door looked straight out of a storybook. 100% recommended!",
-    cakeOrdered: "Enchanted 3D Fairy Butterfly Cake (1.5 kg)",
-    verified: true,
-    photoUrl: butterflyCakeImage,
-  },
-  {
-    id: "rev-5",
-    author: "Priya Mehta",
-    locationId: "lohegaon-dhanori",
-    locationName: "Moreyshree Centre, Dhanori",
-    rating: 5,
-    date: "1 month ago",
-    comment:
-      "Ordered the 2-tier Pink & Blue Ombre Sphere cake for our anniversary. It was beyond beautiful — the chrome gold spheres and pastel gradient were exactly what I envisioned. Taste was equally amazing!",
-    cakeOrdered: "Pink & Blue Ombre Sphere 2-Tier Cake (2 kg)",
-    verified: true,
-    photoUrl: ombreSphereImage,
-  },
-  {
-    id: "rev-6",
-    author: "Sneha Joshi",
-    locationId: "old-mundhwa",
-    locationName: "Old Mundhwa Rd",
-    rating: 5,
-    date: "1 month ago",
-    comment:
-      "Got the Pink Marble Rose Cake for Shrauya's birthday — it was absolutely gorgeous! The gold fault lines, fresh sugar roses and baby's breath flowers made it look like a wedding cake. Taste was divine. Highly recommended!",
-    cakeOrdered: "Pink Marble Rose 2-Tier Luxury Cake (2.5 kg)",
-    verified: true,
-    photoUrl: pinkMarbleImage,
-  },
-  {
-    id: "rev-7",
-    author: "Rahul Nair",
-    locationId: "pimpri-chinchwad",
-    locationName: "Pimpri-Chinchwad",
-    rating: 5,
-    date: "6 weeks ago",
-    comment:
-      "The Baby Elephant cake for my son Jinay's first birthday was so adorable! The fondant details were perfect — sky blue, little elephant on top with yellow daisies. Everyone loved it!",
-    cakeOrdered: "Baby Elephant 'ONE' First Birthday Cake (1 kg)",
-    verified: true,
-    photoUrl: elephantCakeImage,
+    source: "google",
+    sourceUrl: GOOGLE_MAPS_URL,
   },
 ];
 
-export function getCake(productId: string) {
-  if (productId === "custom-cake") {
-    return {
-      id: "custom-cake",
-      name: "Custom Bespoke Cake",
-      description: "Baked to your custom flavor, size, frosting, and inscription request.",
-      image: chocolateBerryImage,
-      estimateFor500g: 850,
-      occasions: ["Birthday", "Anniversary", "Wedding", "Just because"] as const,
-    };
-  }
-  return cakeCatalog.find((cake) => cake.id === productId);
+export function getCake(id: string) {
+  return cakeCatalog.find((cake) => cake.id === id);
 }
 
-export function estimateLineTotal(line: CartLine) {
-  const cake = getCake(line.productId);
+export function estimateLineTotal(cakeId: string, weight: CakeWeight, quantity: number = 1): number {
+  const cake = getCake(cakeId);
   if (!cake) return 0;
-  const sizeMultiplier = line.weight === "1 kg" ? 1.75 : 1;
-  return Math.round(cake.estimateFor500g * sizeMultiplier) * line.quantity;
+  const multiplier = weight === "1 kg" ? 1.75 : 1.0;
+  return Math.round(cake.estimateFor500g * multiplier * quantity);
 }
 
-export function estimateCartTotal(items: CartLine[]) {
-  return items.reduce((total, line) => total + estimateLineTotal(line), 0);
+export function estimateCartTotal(
+  items: Array<{ productId: string; weight: CakeWeight; quantity: number }>,
+): number {
+  return items.reduce((total, item) => total + estimateLineTotal(item.productId, item.weight, item.quantity), 0);
 }
 
-export function formatRupees(amount: number) {
-  return new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0,
-  }).format(amount);
-}
