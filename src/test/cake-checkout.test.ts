@@ -10,9 +10,9 @@ describe("cake checkout safeguards", () => {
     expect(
       estimateCartTotal([{ productId: "cookies-cream-oreo", weight: "500 g", quantity: 2 }]),
     ).toBe(1700);
-    expect(estimateCartTotal([{ productId: "cookies-cream-oreo", weight: "1 kg", quantity: 1 }])).toBe(
-      1488,
-    );
+    expect(
+      estimateCartTotal([{ productId: "cookies-cream-oreo", weight: "1 kg", quantity: 1 }]),
+    ).toBe(1488);
   });
 
   it("rejects an order request without a valid way to contact the customer", () => {

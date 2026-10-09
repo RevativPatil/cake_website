@@ -78,73 +78,73 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #FAF8F5;
-  --foreground: #2A211C;
-  --card: #FFFFFF;
-  --card-foreground: #2A211C;
-  --popover: #FFFFFF;
-  --popover-foreground: #2A211C;
-  --primary: #2A211C;
-  --primary-foreground: #FAF8F5;
-  --secondary: #F3EDE7;
-  --secondary-foreground: #3D2E27;
-  --muted: #F3EDE7;
-  --muted-foreground: #786B63;
-  --accent: #EFE6DC;
-  --accent-foreground: #2A211C;
-  --destructive: #991B1B;
-  --destructive-foreground: #FAF8F5;
-  --border: #E6DFD7;
-  --input: #E6DFD7;
-  --ring: #786B63;
-  --chart-1: #1B7B54;
-  --chart-2: #B45309;
-  --chart-3: #9F1239;
+  --background: #faf8f5;
+  --foreground: #2a211c;
+  --card: #ffffff;
+  --card-foreground: #2a211c;
+  --popover: #ffffff;
+  --popover-foreground: #2a211c;
+  --primary: #2a211c;
+  --primary-foreground: #faf8f5;
+  --secondary: #f3ede7;
+  --secondary-foreground: #3d2e27;
+  --muted: #f3ede7;
+  --muted-foreground: #786b63;
+  --accent: #efe6dc;
+  --accent-foreground: #2a211c;
+  --destructive: #991b1b;
+  --destructive-foreground: #faf8f5;
+  --border: #e6dfd7;
+  --input: #e6dfd7;
+  --ring: #786b63;
+  --chart-1: #1b7b54;
+  --chart-2: #b45309;
+  --chart-3: #9f1239;
   --chart-4: #475569;
-  --chart-5: #6B7280;
-  --sidebar: #FAF8F5;
-  --sidebar-foreground: #2A211C;
-  --sidebar-primary: #2A211C;
-  --sidebar-primary-foreground: #FAF8F5;
-  --sidebar-accent: #F3EDE7;
-  --sidebar-accent-foreground: #3D2E27;
-  --sidebar-border: #E6DFD7;
-  --sidebar-ring: #786B63;
-  --vault-rose: #9F1239;
-  --vault-gold: #B45309;
+  --chart-5: #6b7280;
+  --sidebar: #faf8f5;
+  --sidebar-foreground: #2a211c;
+  --sidebar-primary: #2a211c;
+  --sidebar-primary-foreground: #faf8f5;
+  --sidebar-accent: #f3ede7;
+  --sidebar-accent-foreground: #3d2e27;
+  --sidebar-border: #e6dfd7;
+  --sidebar-ring: #786b63;
+  --vault-rose: #9f1239;
+  --vault-gold: #b45309;
   --vault-shadow: 0 10px 30px rgba(42, 33, 28, 0.05);
   --color-vault-rose: var(--vault-rose);
   --color-vault-gold: var(--vault-gold);
 }
 
 .dark {
-  --background: #1C1715;
-  --foreground: #F5EFEA;
-  --card: #241D1A;
-  --card-foreground: #F5EFEA;
-  --popover: #241D1A;
-  --popover-foreground: #F5EFEA;
-  --primary: #F5EFEA;
-  --primary-foreground: #1C1715;
-  --secondary: #2C2420;
-  --secondary-foreground: #F5EFEA;
-  --muted: #2C2420;
-  --muted-foreground: #A3968E;
-  --accent: #332B26;
-  --accent-foreground: #F5EFEA;
-  --destructive: #EF4444;
-  --destructive-foreground: #F5EFEA;
-  --border: #382D28;
-  --input: #382D28;
-  --ring: #A3968E;
-  --sidebar: #241D1A;
-  --sidebar-foreground: #F5EFEA;
-  --sidebar-primary: #F5EFEA;
-  --sidebar-primary-foreground: #1C1715;
-  --sidebar-accent: #2C2420;
-  --sidebar-accent-foreground: #F5EFEA;
-  --sidebar-border: #382D28;
-  --sidebar-ring: #A3968E;
+  --background: #1c1715;
+  --foreground: #f5efea;
+  --card: #241d1a;
+  --card-foreground: #f5efea;
+  --popover: #241d1a;
+  --popover-foreground: #f5efea;
+  --primary: #f5efea;
+  --primary-foreground: #1c1715;
+  --secondary: #2c2420;
+  --secondary-foreground: #f5efea;
+  --muted: #2c2420;
+  --muted-foreground: #a3968e;
+  --accent: #332b26;
+  --accent-foreground: #f5efea;
+  --destructive: #ef4444;
+  --destructive-foreground: #f5efea;
+  --border: #382d28;
+  --input: #382d28;
+  --ring: #a3968e;
+  --sidebar: #241d1a;
+  --sidebar-foreground: #f5efea;
+  --sidebar-primary: #f5efea;
+  --sidebar-primary-foreground: #1c1715;
+  --sidebar-accent: #2c2420;
+  --sidebar-accent-foreground: #f5efea;
+  --sidebar-border: #382d28;
+  --sidebar-ring: #a3968e;
 }
 
 @layer base {
@@ -229,7 +229,8 @@
 }
 
 @keyframes badge-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -255,7 +256,8 @@
 }
 
 @keyframes swing-3d-revolve {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotateY(-6deg) rotateX(2deg) translateY(0px);
   }
   50% {
@@ -288,15 +290,17 @@
 }
 
 .gold-ribbon-badge {
-  background: linear-gradient(135deg, #D4AF37 0%, #FDF6C7 50%, #B8860B 100%);
-  color: #1A120B;
+  background: linear-gradient(135deg, #d4af37 0%, #fdf6c7 50%, #b8860b 100%);
+  color: #1a120b;
   box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
 }
 
-
 /* Spring Button Hover Effect */
 .btn-spring {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s ease;
 }
 
 .btn-spring:hover {
@@ -382,7 +386,10 @@ html {
 
 .card-3d {
   transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
 }
 
 .card-3d:hover {
@@ -395,7 +402,9 @@ html {
 
 .card-3d-img {
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.5s ease;
 }
 
 .card-3d:hover .card-3d-img {
@@ -404,7 +413,8 @@ html {
 }
 
 @keyframes float-3d-slow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotateX(0deg) rotateY(0deg);
   }
   50% {

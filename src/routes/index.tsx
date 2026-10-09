@@ -162,7 +162,9 @@ function IndexPage() {
   const [bestsellersOnly, setBestsellersOnly] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [customBuilderOpen, setCustomBuilderOpen] = useState(false);
-  const [selectedCakeModal, setSelectedCakeModal] = useState<(typeof cakeCatalog)[number] | null>(null);
+  const [selectedCakeModal, setSelectedCakeModal] = useState<(typeof cakeCatalog)[number] | null>(
+    null,
+  );
   const [modalWeight, setModalWeight] = useState<CakeWeight>("500 g");
 
   // Customizer state
@@ -177,7 +179,9 @@ function IndexPage() {
   // Quiz State
   const [quizOccasion, setQuizOccasion] = useState("Birthday");
   const [quizFlavor, setQuizFlavor] = useState("Chocolate");
-  const [quizRecommendedCake, setQuizRecommendedCake] = useState<(typeof cakeCatalog)[number] | null>(null);
+  const [quizRecommendedCake, setQuizRecommendedCake] = useState<
+    (typeof cakeCatalog)[number] | null
+  >(null);
 
   // Reviews State
   const [reviewsList, setReviewsList] = useState<CustomerReview[]>(customerReviews);
@@ -266,15 +270,23 @@ function IndexPage() {
       if (selectedOccasion !== "All Creations") {
         const cakeOccasions = cake.occasions as readonly string[];
         if (selectedOccasion === "Wedding & Tiered") {
-          if (!cakeOccasions.includes("Wedding") && !cake.name.toLowerCase().includes("2-tier")) return false;
+          if (!cakeOccasions.includes("Wedding") && !cake.name.toLowerCase().includes("2-tier"))
+            return false;
         } else if (selectedOccasion === "Birthday Showstoppers") {
           if (!cakeOccasions.includes("Birthday")) return false;
         } else if (selectedOccasion === "Dessert Tacos & Jars") {
-          if (!cake.name.toLowerCase().includes("taco") && !cake.name.toLowerCase().includes("jar")) return false;
+          if (!cake.name.toLowerCase().includes("taco") && !cake.name.toLowerCase().includes("jar"))
+            return false;
         } else if (selectedOccasion === "Floral & Gift Combos") {
-          if (!cake.name.toLowerCase().includes("bouquet") && !cake.name.toLowerCase().includes("macaron") && !cake.name.toLowerCase().includes("arch")) return false;
+          if (
+            !cake.name.toLowerCase().includes("bouquet") &&
+            !cake.name.toLowerCase().includes("macaron") &&
+            !cake.name.toLowerCase().includes("arch")
+          )
+            return false;
         } else if (selectedOccasion === "Anniversary & Romantic") {
-          if (!cakeOccasions.includes("Anniversary") && !cake.name.toLowerCase().includes("heart")) return false;
+          if (!cakeOccasions.includes("Anniversary") && !cake.name.toLowerCase().includes("heart"))
+            return false;
         }
       }
 
@@ -292,9 +304,7 @@ function IndexPage() {
   }, [selectedOccasion, bestsellersOnly, searchQuery]);
 
   const runQuizRecommendation = () => {
-    let match = cakeCatalog.find((c) =>
-      c.name.toLowerCase().includes(quizFlavor.toLowerCase())
-    );
+    let match = cakeCatalog.find((c) => c.name.toLowerCase().includes(quizFlavor.toLowerCase()));
     if (!match) match = cakeCatalog[0];
     setQuizRecommendedCake(match);
     setSelectedCakeModal(match);
@@ -309,8 +319,6 @@ function IndexPage() {
         className="fixed top-0 left-0 z-50 h-1 bg-gradient-to-r from-rose-600 via-amber-500 to-emerald-500 transition-all duration-150"
         style={{ width: `${scrollProgress}%` }}
       />
-
-
 
       {/* LUXURY STICKY NAVBAR */}
       <header
@@ -366,7 +374,10 @@ function IndexPage() {
             <a className="transition-colors hover:text-vault-rose" href="#find-us">
               Studio Location
             </a>
-            <a className="transition-colors hover:text-vault-rose flex items-center gap-1" href="#reviews">
+            <a
+              className="transition-colors hover:text-vault-rose flex items-center gap-1"
+              href="#reviews"
+            >
               <span>Reviews</span>
               <span className="rounded-full bg-amber-500/15 px-2 py-0.5 text-[10px] font-bold text-amber-600 dark:text-amber-400 group-hover:bg-amber-500/30">
                 {GOOGLE_RATING}⭐
@@ -379,7 +390,6 @@ function IndexPage() {
 
           {/* Header Actions */}
           <div className="flex items-center gap-2.5">
-
             <Button
               variant="outline"
               size="sm"
@@ -516,7 +526,10 @@ function IndexPage() {
       </Sheet>
 
       {/* LUXURY SPLIT HERO WITH INTERACTIVE 3D SHOWCASE CARD */}
-      <section id="home" className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 min-h-[85vh] flex items-center scroll-reveal-section">
+      <section
+        id="home"
+        className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 min-h-[85vh] flex items-center scroll-reveal-section"
+      >
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src={storefrontCounterDisplay}
@@ -544,7 +557,10 @@ function IndexPage() {
               </h1>
 
               <p className="max-w-[660px] text-xs sm:text-sm leading-relaxed text-muted-foreground font-medium">
-                Welcome to <strong>{BUSINESS_NAME}</strong> at Shop No. 2, Alcon Rethos, Kharadi. Every cake is baked fresh to order with real Belgian dark chocolate, Alphonso mangoes, organic saffron, and pure butter — zero egg substitutes, premixes, or preservatives.
+                Welcome to <strong>{BUSINESS_NAME}</strong> at Shop No. 2, Alcon Rethos, Kharadi.
+                Every cake is baked fresh to order with real Belgian dark chocolate, Alphonso
+                mangoes, organic saffron, and pure butter — zero egg substitutes, premixes, or
+                preservatives.
               </p>
 
               <div className="rounded-2xl border border-rose-500/30 bg-background/90 dark:bg-card/90 p-4 max-w-[620px] flex items-center gap-3.5 shadow-md backdrop-blur-md">
@@ -553,7 +569,8 @@ function IndexPage() {
                 </span>
                 <div>
                   <p className="vault-handwritten text-lg text-foreground/95 leading-snug">
-                    "A celebration cake should be genuine, fresh, and delicious. We bake every order from scratch in our Kharadi studio."
+                    "A celebration cake should be genuine, fresh, and delicious. We bake every order
+                    from scratch in our Kharadi studio."
                   </p>
                   <p className="mt-1 text-[10px] font-bold text-vault-rose uppercase tracking-wider">
                     — Master Pastry Chef · Cake Crafts Kharadi
@@ -563,7 +580,8 @@ function IndexPage() {
 
               <div className="flex flex-wrap items-center gap-2.5 pt-1">
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-bold text-emerald-900 dark:text-emerald-300">
-                  <ShieldCheck className="size-3.5 text-emerald-600 dark:text-emerald-400" /> 100% Pure Eggless
+                  <ShieldCheck className="size-3.5 text-emerald-600 dark:text-emerald-400" /> 100%
+                  Pure Eggless
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3.5 py-1 text-xs font-bold text-amber-900 dark:text-amber-300">
                   <Truck className="size-3.5 text-amber-500" /> Express Delivery in Kharadi
@@ -641,8 +659,12 @@ function IndexPage() {
 
                 <div className="mt-4 flex items-center justify-between pt-1 border-t border-border/60">
                   <div>
-                    <span className="text-[10px] text-muted-foreground block font-semibold">100% Eggless Studio Price</span>
-                    <span className="text-xl font-extrabold text-primary">₹749 <span className="text-xs font-normal text-muted-foreground">/ 500g</span></span>
+                    <span className="text-[10px] text-muted-foreground block font-semibold">
+                      100% Eggless Studio Price
+                    </span>
+                    <span className="text-xl font-extrabold text-primary">
+                      ₹749 <span className="text-xs font-normal text-muted-foreground">/ 500g</span>
+                    </span>
                   </div>
 
                   <Button
@@ -665,7 +687,6 @@ function IndexPage() {
       {/* LUXURY INTERACTIVE SIGNATURE BAKERY SHOWCASE */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-secondary/40 via-background to-secondary/30 border-y border-amber-500/20 scroll-reveal relative overflow-hidden">
         <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 relative z-10">
-
           <div className="text-center max-w-[750px] mx-auto mb-12">
             <span className="inline-block rounded-full bg-vault-rose/10 px-4 py-1 text-xs font-extrabold uppercase tracking-[0.25em] text-vault-rose border border-vault-rose/20 mb-2">
               Studio Craftsmanship &amp; Specialties
@@ -674,7 +695,8 @@ function IndexPage() {
               Our 4 Signature Bake Collections
             </h2>
             <p className="mt-3 text-xs sm:text-sm text-muted-foreground leading-relaxed font-medium">
-              Every creation is prepared fresh on order in our Kharadi studio using 100% pure eggless sponges, pure Belgian cocoa, Alphonso pulp, and organic saffron.
+              Every creation is prepared fresh on order in our Kharadi studio using 100% pure
+              eggless sponges, pure Belgian cocoa, Alphonso pulp, and organic saffron.
             </p>
           </div>
 
@@ -686,7 +708,8 @@ function IndexPage() {
                 desc: "Grand multi-tier wedding showstoppers adorned with handcrafted sugar roses, gold metallic spheres & custom topper sketches.",
                 tag: "Wedding & Milestones",
                 badge: "👑 Grand Showstopper",
-                color: "from-amber-500/10 via-amber-500/5 to-transparent border-amber-500/30 text-amber-600 dark:text-amber-300",
+                color:
+                  "from-amber-500/10 via-amber-500/5 to-transparent border-amber-500/30 text-amber-600 dark:text-amber-300",
                 accent: "bg-amber-500 text-white",
                 occasionFilter: "Wedding & Tiered" as Occasion,
               },
@@ -696,7 +719,8 @@ function IndexPage() {
                 desc: "Puneri fusion white chocolate tacos filled with cardamom rasmalai mousse & fresh Alphonso mango cheesecake jars.",
                 tag: "Dessert Specialties",
                 badge: "🌶️ Puneri Fusion",
-                color: "from-emerald-500/10 via-emerald-500/5 to-transparent border-emerald-500/30 text-emerald-600 dark:text-emerald-300",
+                color:
+                  "from-emerald-500/10 via-emerald-500/5 to-transparent border-emerald-500/30 text-emerald-600 dark:text-emerald-300",
                 accent: "bg-emerald-600 text-white",
                 occasionFilter: "Dessert Tacos & Jars" as Occasion,
               },
@@ -706,7 +730,8 @@ function IndexPage() {
                 desc: "Moist dark chocolate sponge layered with speculoos Biscoff caramel drip, Oreo crunch & silky whipped ganache.",
                 tag: "Bestselling Drips",
                 badge: "⭐ Studio #1 Bestseller",
-                color: "from-rose-500/10 via-rose-500/5 to-transparent border-rose-500/30 text-rose-600 dark:text-rose-300",
+                color:
+                  "from-rose-500/10 via-rose-500/5 to-transparent border-rose-500/30 text-rose-600 dark:text-rose-300",
                 accent: "bg-vault-rose text-white",
                 occasionFilter: "Birthday Showstoppers" as Occasion,
               },
@@ -716,7 +741,8 @@ function IndexPage() {
                 desc: "French almond macaron gift boxes paired with fresh blue orchid flower bouquets & luxury chocolate hampers.",
                 tag: "Gifting & Celebrations",
                 badge: "💐 Luxury Gifting",
-                color: "from-sky-500/10 via-sky-500/5 to-transparent border-sky-500/30 text-sky-600 dark:text-sky-300",
+                color:
+                  "from-sky-500/10 via-sky-500/5 to-transparent border-sky-500/30 text-sky-600 dark:text-sky-300",
                 accent: "bg-sky-600 text-white",
                 occasionFilter: "Floral & Gift Combos" as Occasion,
               },
@@ -733,7 +759,9 @@ function IndexPage() {
 
                 <div>
                   <div className="flex items-center justify-between mb-4 pt-1">
-                    <span className={`flex size-12 items-center justify-center rounded-2xl ${pillar.accent} shadow-md transition-transform duration-300 group-hover:scale-110`}>
+                    <span
+                      className={`flex size-12 items-center justify-center rounded-2xl ${pillar.accent} shadow-md transition-transform duration-300 group-hover:scale-110`}
+                    >
                       <pillar.icon className="size-6" />
                     </span>
                   </div>
@@ -790,7 +818,8 @@ function IndexPage() {
                   Step Inside Our Studio Lounge in Kharadi
                 </h4>
                 <p className="text-xs text-white/80 mt-1">
-                  Freshly baked signature pastries, rasmalai tacos, jar desserts &amp; custom sample display cases updated every morning!
+                  Freshly baked signature pastries, rasmalai tacos, jar desserts &amp; custom sample
+                  display cases updated every morning!
                 </p>
               </div>
             </div>
@@ -803,7 +832,10 @@ function IndexPage() {
                 Freshly Baked Every Morning with 100% Pure Passion
               </h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                When you visit <strong>Cake Crafts</strong> at Shop No. 2, Alcon Rethos, Kharadi, you enter a warm, fragrant space dedicated to pure eggless pastry perfection. Walk in to sample our daily specials or schedule a private custom wedding consultation with our pastry chef.
+                When you visit <strong>Cake Crafts</strong> at Shop No. 2, Alcon Rethos, Kharadi,
+                you enter a warm, fragrant space dedicated to pure eggless pastry perfection. Walk
+                in to sample our daily specials or schedule a private custom wedding consultation
+                with our pastry chef.
               </p>
 
               <div className="space-y-3 border-t border-border/60 pt-4 text-xs font-semibold text-foreground">
@@ -863,7 +895,8 @@ function IndexPage() {
                   Interactive Taste Finder — Find Your Perfect Bake
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  Select your occasion and flavor preference to reveal our pastry chef's recommendation!
+                  Select your occasion and flavor preference to reveal our pastry chef's
+                  recommendation!
                 </p>
               </div>
             </div>
@@ -904,7 +937,10 @@ function IndexPage() {
       </section>
 
       {/* CAKE CATALOGUE SECTION */}
-      <section id="cakes" className="py-20 lg:py-28 bg-gradient-to-b from-background via-secondary/20 to-background border-b border-border/60 scroll-reveal-section">
+      <section
+        id="cakes"
+        className="py-20 lg:py-28 bg-gradient-to-b from-background via-secondary/20 to-background border-b border-border/60 scroll-reveal-section"
+      >
         <div className="mx-auto w-full max-w-[1500px] px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
             <div className="space-y-1">
@@ -958,12 +994,15 @@ function IndexPage() {
                   variant={bestsellersOnly ? "default" : "outline"}
                   size="sm"
                   onClick={() => setBestsellersOnly((prev) => !prev)}
-                  className={`h-11 gap-2 text-xs font-extrabold rounded-2xl px-5 transition-all btn-spring ${bestsellersOnly
+                  className={`h-11 gap-2 text-xs font-extrabold rounded-2xl px-5 transition-all btn-spring ${
+                    bestsellersOnly
                       ? "bg-amber-500 text-white hover:bg-amber-600 shadow-md"
                       : "border-border bg-background hover:bg-secondary text-foreground"
-                    }`}
+                  }`}
                 >
-                  <Star className={`size-4 ${bestsellersOnly ? "fill-white text-white" : "fill-amber-500 text-amber-500"}`} />
+                  <Star
+                    className={`size-4 ${bestsellersOnly ? "fill-white text-white" : "fill-amber-500 text-amber-500"}`}
+                  />
                   <span>Bestsellers Only</span>
                 </Button>
 
@@ -990,10 +1029,11 @@ function IndexPage() {
                 <button
                   key={occ}
                   onClick={() => setSelectedOccasion(occ)}
-                  className={`h-9.5 shrink-0 rounded-full px-4.5 text-xs font-bold transition-all btn-spring ${selectedOccasion === occ
+                  className={`h-9.5 shrink-0 rounded-full px-4.5 text-xs font-bold transition-all btn-spring ${
+                    selectedOccasion === occ
                       ? "bg-vault-rose text-white shadow-md shadow-vault-rose/20 scale-102"
                       : "border border-border/70 bg-background/60 text-muted-foreground hover:bg-secondary hover:text-foreground"
-                    }`}
+                  }`}
                 >
                   {occ}
                 </button>
@@ -1019,9 +1059,12 @@ function IndexPage() {
           {filteredCakes.length === 0 && (
             <div className="py-20 text-center rounded-3xl border border-dashed border-border bg-card/50 p-8 max-w-[500px] mx-auto">
               <CakeSlice className="mx-auto size-14 text-vault-rose/40 animate-bounce" />
-              <h3 className="vault-serif-luxury mt-4 text-2xl font-bold text-primary">No artisan bakes found</h3>
+              <h3 className="vault-serif-luxury mt-4 text-2xl font-bold text-primary">
+                No artisan bakes found
+              </h3>
               <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                We couldn't find any cakes matching your search criteria. Try clearing your filters or search terms.
+                We couldn't find any cakes matching your search criteria. Try clearing your filters
+                or search terms.
               </p>
               <Button
                 onClick={() => {
@@ -1049,7 +1092,8 @@ function IndexPage() {
               Visit Us in Kharadi, Pune
             </h2>
             <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed font-medium">
-              Visit our bakery studio at Shop No. 2, Alcon Rethos for custom consultations or fresh pickups.
+              Visit our bakery studio at Shop No. 2, Alcon Rethos for custom consultations or fresh
+              pickups.
             </p>
           </div>
 
@@ -1072,7 +1116,9 @@ function IndexPage() {
                   <div className="flex items-start gap-3">
                     <MapPin className="size-4.5 shrink-0 text-vault-rose mt-0.5" />
                     <div>
-                      <strong className="text-foreground block mb-0.5 text-xs">Exact Studio Address:</strong>
+                      <strong className="text-foreground block mb-0.5 text-xs">
+                        Exact Studio Address:
+                      </strong>
                       <span>{STORE_ADDRESS}</span>
                       <p className="mt-1 text-[11px] font-semibold text-vault-rose">
                         📍 Landmark: Opposite Forest County, Near EON Free Zone IT Park
@@ -1083,24 +1129,33 @@ function IndexPage() {
                   <div className="flex items-start gap-3">
                     <Clock className="size-4.5 shrink-0 text-amber-500 mt-0.5" />
                     <div>
-                      <strong className="text-foreground block mb-0.5 text-xs">Studio Operating Hours:</strong>
+                      <strong className="text-foreground block mb-0.5 text-xs">
+                        Studio Operating Hours:
+                      </strong>
                       <span>{OPENING_HOURS}</span>
-                      <p className="mt-0.5 text-[11px] text-muted-foreground">Open 365 Days a Year</p>
+                      <p className="mt-0.5 text-[11px] text-muted-foreground">
+                        Open 365 Days a Year
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <Phone className="size-4.5 shrink-0 text-emerald-600 mt-0.5" />
                     <div>
-                      <strong className="text-foreground block mb-0.5 text-xs">Direct Studio Hotline:</strong>
-                      <span className="font-bold text-foreground">{STORE_PHONE}</span> / <span>{ALT_STORE_PHONE}</span>
+                      <strong className="text-foreground block mb-0.5 text-xs">
+                        Direct Studio Hotline:
+                      </strong>
+                      <span className="font-bold text-foreground">{STORE_PHONE}</span> /{" "}
+                      <span>{ALT_STORE_PHONE}</span>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <Instagram className="size-4.5 shrink-0 text-pink-600 mt-0.5" />
                     <div>
-                      <strong className="text-foreground block mb-0.5 text-xs">Official Instagram:</strong>
+                      <strong className="text-foreground block mb-0.5 text-xs">
+                        Official Instagram:
+                      </strong>
                       <a
                         href={INSTAGRAM_URL}
                         target="_blank"
@@ -1278,15 +1333,15 @@ function IndexPage() {
                     </span>
                   </div>
 
-                  <p className="text-xs leading-relaxed text-foreground italic">
-                    "{rev.comment}"
-                  </p>
+                  <p className="text-xs leading-relaxed text-foreground italic">"{rev.comment}"</p>
                 </div>
 
                 <div className="mt-6 border-t border-border/60 pt-4 flex items-center justify-between text-xs">
                   <div>
                     <p className="font-bold text-primary">{rev.author}</p>
-                    <p className="text-[11px] text-muted-foreground">{rev.cakeOrdered || "Custom Bake"}</p>
+                    <p className="text-[11px] text-muted-foreground">
+                      {rev.cakeOrdered || "Custom Bake"}
+                    </p>
                   </div>
                   <a
                     href={rev.sourceUrl}
@@ -1316,30 +1371,44 @@ function IndexPage() {
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1" className="rounded-2xl border border-border bg-card px-5 py-2">
+            <AccordionItem
+              value="item-1"
+              className="rounded-2xl border border-border bg-card px-5 py-2"
+            >
               <AccordionTrigger className="text-base font-bold text-primary hover:no-underline">
                 Are all cakes at Cake Crafts 100% eggless?
               </AccordionTrigger>
               <AccordionContent className="text-xs leading-relaxed text-muted-foreground">
-                Yes, absolutely! Every single cake, dessert jar, brownie, and custom bake at Cake Crafts is strictly 100% pure vegetarian and eggless.
+                Yes, absolutely! Every single cake, dessert jar, brownie, and custom bake at Cake
+                Crafts is strictly 100% pure vegetarian and eggless.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2" className="rounded-2xl border border-border bg-card px-5 py-2">
+            <AccordionItem
+              value="item-2"
+              className="rounded-2xl border border-border bg-card px-5 py-2"
+            >
               <AccordionTrigger className="text-base font-bold text-primary hover:no-underline">
                 How far in advance should I order a custom design cake?
               </AccordionTrigger>
               <AccordionContent className="text-xs leading-relaxed text-muted-foreground">
-                For standard signature menu cakes, same-day pickup or delivery (with 2–4 hours advance notice) is available. For custom 2-tier designs or fondant cakes, we recommend ordering 24–48 hours in advance.
+                For standard signature menu cakes, same-day pickup or delivery (with 2–4 hours
+                advance notice) is available. For custom 2-tier designs or fondant cakes, we
+                recommend ordering 24–48 hours in advance.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3" className="rounded-2xl border border-border bg-card px-5 py-2">
+            <AccordionItem
+              value="item-3"
+              className="rounded-2xl border border-border bg-card px-5 py-2"
+            >
               <AccordionTrigger className="text-base font-bold text-primary hover:no-underline">
                 Where is your shop located in Pune?
               </AccordionTrigger>
               <AccordionContent className="text-xs leading-relaxed text-muted-foreground">
-                We operate exclusively from Shop No. 2, Alcon Rethos, EON Free Zone Road, opposite Forest County, Kharadi, Pune, Maharashtra 411014. Open daily from 10:00 AM to 11:00 PM.
+                We operate exclusively from Shop No. 2, Alcon Rethos, EON Free Zone Road, opposite
+                Forest County, Kharadi, Pune, Maharashtra 411014. Open daily from 10:00 AM to 11:00
+                PM.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -1358,7 +1427,8 @@ function IndexPage() {
                 Ready to Order Your Dream Cake?
               </h3>
               <p className="mt-1 text-sm text-slate-400 max-w-[500px]">
-                Contact our Kharadi studio directly on WhatsApp or Call us. Same-day delivery available across Kharadi &amp; EON Free Zone.
+                Contact our Kharadi studio directly on WhatsApp or Call us. Same-day delivery
+                available across Kharadi &amp; EON Free Zone.
               </p>
             </div>
 
@@ -1389,14 +1459,19 @@ function IndexPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 pt-6">
-            <p>&copy; {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
+            </p>
             <p>{STORE_ADDRESS}</p>
           </div>
         </div>
       </footer>
 
       {/* QUICK VIEW MODAL FOR CAKE DETAILS */}
-      <Dialog open={!!selectedCakeModal} onOpenChange={(open) => !open && setSelectedCakeModal(null)}>
+      <Dialog
+        open={!!selectedCakeModal}
+        onOpenChange={(open) => !open && setSelectedCakeModal(null)}
+      >
         <DialogContent className="sm:max-w-[660px] p-0 overflow-hidden rounded-3xl border border-border shadow-2xl">
           {selectedCakeModal && (
             <div className="grid sm:grid-cols-2">
@@ -1407,7 +1482,8 @@ function IndexPage() {
                   className="size-full object-cover transition-transform duration-700 hover:scale-105"
                 />
                 <span className="absolute top-3 left-3 rounded-full border border-emerald-500/30 bg-background/90 text-emerald-700 dark:text-emerald-400 px-3 py-1 text-[10px] font-bold backdrop-blur-md shadow-xs flex items-center gap-1">
-                  <CheckCircle2 className="size-3 text-emerald-600 dark:text-emerald-400" /> 100% Eggless
+                  <CheckCircle2 className="size-3 text-emerald-600 dark:text-emerald-400" /> 100%
+                  Eggless
                 </span>
               </div>
               <div className="p-6 flex flex-col justify-between">
@@ -1423,13 +1499,16 @@ function IndexPage() {
                   </p>
                   <div className="mt-4 pt-3 border-t border-border space-y-1.5 text-[11px] text-muted-foreground font-medium">
                     <p className="flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400 font-semibold">
-                      <CheckCircle2 className="size-3.5 shrink-0" /> Baked fresh on order in Kharadi Studio
+                      <CheckCircle2 className="size-3.5 shrink-0" /> Baked fresh on order in Kharadi
+                      Studio
                     </p>
                     <p className="flex items-center gap-1.5">
-                      <ShieldCheck className="size-3.5 shrink-0 text-vault-rose" /> 100% Pure Vegetarian &amp; Eggless
+                      <ShieldCheck className="size-3.5 shrink-0 text-vault-rose" /> 100% Pure
+                      Vegetarian &amp; Eggless
                     </p>
                     <p className="flex items-center gap-1.5">
-                      <Sparkles className="size-3.5 shrink-0 text-amber-500" /> Free custom handwritten message tag
+                      <Sparkles className="size-3.5 shrink-0 text-amber-500" /> Free custom
+                      handwritten message tag
                     </p>
                   </div>
                 </div>
@@ -1454,7 +1533,9 @@ function IndexPage() {
                     </div>
 
                     <div className="text-right">
-                      <span className="block text-[10px] text-muted-foreground">Estimated Total</span>
+                      <span className="block text-[10px] text-muted-foreground">
+                        Estimated Total
+                      </span>
                       <span className="text-xl font-extrabold text-primary tabular-nums">
                         {formatRupees(estimateLineTotal(selectedCakeModal.id, modalWeight))}
                       </span>
@@ -1500,7 +1581,8 @@ function IndexPage() {
               <Wand2 className="size-6 text-vault-rose" /> Interactive Cake Layer Builder
             </DialogTitle>
             <DialogDescription className="text-xs text-muted-foreground">
-              Select your custom 100% eggless sponge, filling, and frosting layers for a personalized bakery masterpiece.
+              Select your custom 100% eggless sponge, filling, and frosting layers for a
+              personalized bakery masterpiece.
             </DialogDescription>
           </DialogHeader>
 
@@ -1610,11 +1692,13 @@ function IndexPage() {
                   onChange={(e) => setBuilderOccasion(e.target.value)}
                   className="h-10 w-full rounded-xl border border-input bg-card px-3 text-xs font-bold text-foreground outline-none"
                 >
-                  {occasions.filter((o) => o !== "All Creations").map((occ) => (
-                    <option key={occ} value={occ}>
-                      {occ}
-                    </option>
-                  ))}
+                  {occasions
+                    .filter((o) => o !== "All Creations")
+                    .map((occ) => (
+                      <option key={occ} value={occ}>
+                        {occ}
+                      </option>
+                    ))}
                 </select>
               </div>
             </div>
@@ -1678,9 +1762,7 @@ function IndexPage() {
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-muted-foreground mb-1">
-                Rating
-              </label>
+              <label className="block text-xs font-bold text-muted-foreground mb-1">Rating</label>
               <div className="flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button
@@ -1690,10 +1772,11 @@ function IndexPage() {
                     className="p-1"
                   >
                     <Star
-                      className={`size-6 ${star <= reviewRating
+                      className={`size-6 ${
+                        star <= reviewRating
                           ? "fill-amber-500 text-amber-500"
                           : "text-muted-foreground/40"
-                        }`}
+                      }`}
                     />
                   </button>
                 ))}
@@ -1713,7 +1796,10 @@ function IndexPage() {
                 className="w-full rounded-xl border border-input bg-card p-3.5 text-xs outline-none focus:border-ring"
               />
             </div>
-            <Button type="submit" className="h-11 w-full text-xs font-bold bg-vault-rose text-white hover:bg-rose-600 rounded-xl">
+            <Button
+              type="submit"
+              className="h-11 w-full text-xs font-bold bg-vault-rose text-white hover:bg-rose-600 rounded-xl"
+            >
               Submit Review
             </Button>
           </form>
@@ -1761,7 +1847,9 @@ function CakeCard({
   const [peekSlice, setPeekSlice] = useState(false);
 
   return (
-    <article className={`group flex flex-col justify-between h-full min-w-0 rounded-3xl border border-border/80 bg-card/90 backdrop-blur-xs p-4.5 shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-vault-rose/50 card-3d glare-sweep stagger-card-scroll stagger-delay-${index % 8} relative overflow-hidden`}>
+    <article
+      className={`group flex flex-col justify-between h-full min-w-0 rounded-3xl border border-border/80 bg-card/90 backdrop-blur-xs p-4.5 shadow-sm transition-all duration-300 hover:shadow-2xl hover:border-vault-rose/50 card-3d glare-sweep stagger-card-scroll stagger-delay-${index % 8} relative overflow-hidden`}
+    >
       {/* Gold Ribbon Badge for Bestsellers */}
       {"bestseller" in cake && cake.bestseller && (
         <div className="absolute top-3 -right-8 rotate-45 gold-ribbon-badge text-[9px] font-black uppercase tracking-wider py-0.5 px-8 z-20 shadow-md pointer-events-none">
@@ -1770,7 +1858,10 @@ function CakeCard({
       )}
 
       {/* Main Image or Slice Layer Diagram View */}
-      <div className="relative aspect-[0.98/1] overflow-hidden rounded-2xl bg-secondary cursor-pointer" onClick={onQuickView}>
+      <div
+        className="relative aspect-[0.98/1] overflow-hidden rounded-2xl bg-secondary cursor-pointer"
+        onClick={onQuickView}
+      >
         {!peekSlice ? (
           <>
             <img
@@ -1780,7 +1871,8 @@ function CakeCard({
               className="size-full object-cover transition-transform duration-700 card-3d-img group-hover:scale-105"
             />
             <span className="absolute left-3 top-3 rounded-full border border-emerald-500/40 bg-background/90 px-2.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:text-emerald-400 backdrop-blur-md shadow-xs flex items-center gap-1">
-              <CheckCircle2 className="size-2.5 text-emerald-600 dark:text-emerald-400" /> 100% Eggless
+              <CheckCircle2 className="size-2.5 text-emerald-600 dark:text-emerald-400" /> 100%
+              Eggless
             </span>
 
             {/* Floating Flavor Bubbles on Hover */}
@@ -1849,55 +1941,59 @@ function CakeCard({
           </p>
         </div>
 
-          <div className="mt-4 flex flex-col gap-3 border-t border-border/60 pt-4">
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex flex-col">
-                <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-0.5">Size</span>
-                <select
-                  value={weight}
-                  onChange={(e) => setWeight(e.target.value as CakeWeight)}
-                  className="h-8 rounded-lg border border-input bg-secondary/50 px-2 text-xs font-bold text-foreground outline-none transition-colors hover:border-vault-rose/50 cursor-pointer"
-                >
-                  {cakeWeights.map((size) => (
-                    <option key={size} value={size}>
-                      {size}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="text-right">
-                <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-0.5 block">Price</span>
-                <p className="text-base font-extrabold tabular-nums text-primary leading-none">
-                  {formatRupees(estimateLineTotal(cake.id, weight))}
-                </p>
-              </div>
+        <div className="mt-4 flex flex-col gap-3 border-t border-border/60 pt-4">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex flex-col">
+              <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-0.5">
+                Size
+              </span>
+              <select
+                value={weight}
+                onChange={(e) => setWeight(e.target.value as CakeWeight)}
+                className="h-8 rounded-lg border border-input bg-secondary/50 px-2 text-xs font-bold text-foreground outline-none transition-colors hover:border-vault-rose/50 cursor-pointer"
+              >
+                {cakeWeights.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
             </div>
-
-            <div className="flex items-center gap-2 mt-1">
-              <Button
-                asChild
-                className="h-10 flex-1 gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-xs font-extrabold text-white shadow-md shadow-emerald-500/25 transition-all hover:scale-102 active:scale-98 border-0"
-              >
-                <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi ${BRAND_SHORT}, I would like to order the ${cake.name} (${weight}).`)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => triggerConfetti()}
-                >
-                  <MessageSquare className="size-4" /> Order Now
-                </a>
-              </Button>
-
-              <Button
-                asChild
-                className="size-10 shrink-0 rounded-xl bg-black text-white hover:bg-zinc-800 shadow-md shadow-black/20 transition-all hover:scale-105 active:scale-95 border border-white/10 p-0 flex items-center justify-center"
-              >
-                <a href={`tel:${STORE_PHONE}`} title={`Call ${BRAND_SHORT} Studio`}>
-                  <Phone className="size-4" />
-                </a>
-              </Button>
+            <div className="text-right">
+              <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-0.5 block">
+                Price
+              </span>
+              <p className="text-base font-extrabold tabular-nums text-primary leading-none">
+                {formatRupees(estimateLineTotal(cake.id, weight))}
+              </p>
             </div>
           </div>
+
+          <div className="flex items-center gap-2 mt-1">
+            <Button
+              asChild
+              className="h-10 flex-1 gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-xs font-extrabold text-white shadow-md shadow-emerald-500/25 transition-all hover:scale-102 active:scale-98 border-0"
+            >
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi ${BRAND_SHORT}, I would like to order the ${cake.name} (${weight}).`)}`}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => triggerConfetti()}
+              >
+                <MessageSquare className="size-4" /> Order Now
+              </a>
+            </Button>
+
+            <Button
+              asChild
+              className="size-10 shrink-0 rounded-xl bg-black text-white hover:bg-zinc-800 shadow-md shadow-black/20 transition-all hover:scale-105 active:scale-95 border border-white/10 p-0 flex items-center justify-center"
+            >
+              <a href={`tel:${STORE_PHONE}`} title={`Call ${BRAND_SHORT} Studio`}>
+                <Phone className="size-4" />
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </article>
   );

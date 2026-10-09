@@ -4,7 +4,7 @@ import { _ as createFileRoute, b as useRouter, d as Scripts, f as HeadContent, g
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BjrXXg89.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CgrY42hX.js
 var import_jsx_runtime = require_jsx_runtime();
 var Toaster$1 = ({ ...props }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
@@ -398,7 +398,7 @@ var itemListSchema = {
 		}
 	]
 };
-var $$splitComponentImporter = () => import("./routes-Q0w5ljKf.mjs");
+var $$splitComponentImporter = () => import("./routes-BCczmQ_-.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({
 	head: () => ({
 		meta: [

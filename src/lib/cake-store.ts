@@ -100,7 +100,7 @@ export const MAP_EMBED_URL =
   "https://maps.google.com/maps?q=Cake%20Crafts%20Customised%20Cake%20Studio%20Alcon%20Rethos%20Kharadi%20Pune&t=&z=16&ie=UTF8&iwloc=&output=embed";
 
 /** Coordinates */
-export const GEO_COORDS = { lat: 18.5530, lng: 73.9412 };
+export const GEO_COORDS = { lat: 18.553, lng: 73.9412 };
 
 /** Studio services */
 export const SERVICES = [
@@ -450,7 +450,11 @@ export function getCake(id: string) {
   return cakeCatalog.find((cake) => cake.id === id);
 }
 
-export function estimateLineTotal(cakeId: string, weight: CakeWeight, quantity: number = 1): number {
+export function estimateLineTotal(
+  cakeId: string,
+  weight: CakeWeight,
+  quantity: number = 1,
+): number {
   const cake = getCake(cakeId);
   if (!cake) return 0;
   const multiplier = weight === "1 kg" ? 1.75 : 1.0;
@@ -460,6 +464,8 @@ export function estimateLineTotal(cakeId: string, weight: CakeWeight, quantity: 
 export function estimateCartTotal(
   items: Array<{ productId: string; weight: CakeWeight; quantity: number }>,
 ): number {
-  return items.reduce((total, item) => total + estimateLineTotal(item.productId, item.weight, item.quantity), 0);
+  return items.reduce(
+    (total, item) => total + estimateLineTotal(item.productId, item.weight, item.quantity),
+    0,
+  );
 }
-

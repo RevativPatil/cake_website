@@ -6,7 +6,7 @@ import { C as ArrowRight, S as ArrowUp, _ as Clock, a as Sparkles, b as CakeSlic
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { a as DialogOverlay$1, i as DialogDescription$1, n as DialogClose, o as DialogPortal$1, r as DialogContent$1, s as DialogTitle$1, t as Dialog$1 } from "../_libs/@radix-ui/react-dialog+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-Q0w5ljKf.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BCczmQ_-.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var storefront_real_interior_default = "/assets/storefront-real-interior-C-7fd5Xn.jpg";
@@ -1195,7 +1195,8 @@ function IndexPage() {
 														className: "font-bold text-foreground",
 														children: STORE_PHONE
 													}),
-													" / ",
+													" /",
+													" ",
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: ALT_STORE_PHONE })
 												] })]
 											}),

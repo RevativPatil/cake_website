@@ -15,8 +15,7 @@ export const bakerySchema = {
   "@id": `${GOOGLE_MAPS_URL}#bakery`,
   name: BUSINESS_NAME,
   image: "/og-image.png",
-  description:
-    `${BUSINESS_NAME} — Top-rated customised cake studio in Kharadi, Pune. Fresh eggless and vegetarian cakes, designer birthday cakes, wedding cakes, walnut brownies, chocolate truffle cakes, and same-day delivery. Located at Alcon Rethos, opposite Forest County, EON Free Zone Road.`,
+  description: `${BUSINESS_NAME} — Top-rated customised cake studio in Kharadi, Pune. Fresh eggless and vegetarian cakes, designer birthday cakes, wedding cakes, walnut brownies, chocolate truffle cakes, and same-day delivery. Located at Alcon Rethos, opposite Forest County, EON Free Zone Road.`,
   priceRange: "₹180–₹2,500+",
   telephone: STORE_PHONE,
   keywords: [
@@ -72,15 +71,7 @@ export const bakerySchema = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       opens: "10:00",
       closes: "23:00",
     },
