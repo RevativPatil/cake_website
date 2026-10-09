@@ -4,7 +4,7 @@ import { _ as createFileRoute, b as useRouter, d as Scripts, f as HeadContent, g
 import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CgrY42hX.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-q5M-YQn9.js
 var import_jsx_runtime = require_jsx_runtime();
 var Toaster$1 = ({ ...props }) => {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Toaster, {
@@ -18,7 +18,7 @@ var Toaster$1 = ({ ...props }) => {
 		...props
 	});
 };
-var styles_default = "/assets/styles-CkNyuS0F.css";
+var styles_default = "/assets/styles-CdFaHcrv.css";
 function NotFoundComponent() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "flex min-h-screen items-center justify-center bg-background px-4",
@@ -182,8 +182,13 @@ var Route$1 = createRootRouteWithContext()({
 			},
 			{
 				rel: "icon",
-				href: "/favicon.ico",
-				type: "image/x-icon"
+				href: "/favicon.svg",
+				type: "image/svg+xml"
+			},
+			{
+				rel: "shortcut icon",
+				href: "/favicon.svg",
+				type: "image/svg+xml"
 			}
 		]
 	}),
@@ -398,7 +403,7 @@ var itemListSchema = {
 		}
 	]
 };
-var $$splitComponentImporter = () => import("./routes-BCczmQ_-.mjs");
+var $$splitComponentImporter = () => import("./routes-BQe9NwGw.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({
 	head: () => ({
 		meta: [

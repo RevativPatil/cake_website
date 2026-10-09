@@ -534,7 +534,7 @@ function IndexPage() {
           <img
             src={storefrontCounterDisplay}
             alt="Cake Crafts Bakery Studio Display Counter"
-            className="size-full object-cover object-center opacity-100 dark:opacity-85 filter brightness-[0.95] contrast-[1.05]"
+            className="size-full object-cover object-center opacity-100 dark:opacity-85 filter brightness-[0.95] contrast-[1.05] blur-[3px] scale-[1.02]"
             fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/65 to-transparent dark:from-[#140F0D]/90 dark:via-[#140F0D]/70 dark:to-transparent" />
