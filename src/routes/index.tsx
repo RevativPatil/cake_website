@@ -324,22 +324,22 @@ function IndexPage() {
       <header
         className={`sticky top-0 z-40 border-b transition-all duration-300 ${
           isScrolled
-            ? "border-border/80 bg-background/95 backdrop-blur-md shadow-md py-3"
-            : "border-border/40 bg-background/80 backdrop-blur-sm py-5 lg:py-6"
+            ? "border-border/80 bg-background/95 backdrop-blur-md shadow-md py-2.5 sm:py-3"
+            : "border-border/40 bg-background/80 backdrop-blur-sm py-3 sm:py-5 lg:py-6"
         }`}
       >
-        <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-3.5 sm:px-6 lg:px-8">
           {/* Brand Logo & Location Pin */}
-          <div className="flex items-center gap-4">
-            <a href="#home" className="flex items-center gap-3 group">
-              <span className="flex size-11 items-center justify-center rounded-2xl bg-gradient-to-br from-vault-rose to-rose-700 text-white shadow-lg transition-transform duration-300 group-hover:scale-105">
-                <CakeSlice className="size-6" strokeWidth={2.2} />
+          <div className="flex items-center gap-3 sm:gap-4">
+            <a href="#home" className="flex items-center gap-2.5 sm:gap-3 group">
+              <span className="flex size-9.5 sm:size-11 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-vault-rose to-rose-700 text-white shadow-lg transition-transform duration-300 group-hover:scale-105">
+                <CakeSlice className="size-5 sm:size-6" strokeWidth={2.2} />
               </span>
               <span className="flex flex-col leading-none">
-                <span className="vault-serif-luxury text-[22px] sm:text-[24px] font-bold tracking-tight text-primary">
+                <span className="vault-serif-luxury text-[19px] sm:text-[24px] font-bold tracking-tight text-primary">
                   {BRAND_SHORT}
                 </span>
-                <span className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.25em] text-vault-rose truncate">
+                <span className="mt-0.5 text-[8.5px] sm:text-[9px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-vault-rose truncate max-w-[200px] sm:max-w-none">
                   100% Eggless Customised Cake Studio · Kharadi
                 </span>
               </span>
@@ -528,7 +528,7 @@ function IndexPage() {
       {/* LUXURY SPLIT HERO WITH INTERACTIVE 3D SHOWCASE CARD */}
       <section
         id="home"
-        className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 min-h-[85vh] flex items-center scroll-reveal-section"
+        className="relative overflow-hidden pt-6 pb-12 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-32 min-h-0 lg:min-h-[85vh] flex items-center scroll-reveal-section"
       >
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
@@ -541,17 +541,17 @@ function IndexPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background dark:from-[#140F0D]/40 dark:to-[#140F0D]" />
         </div>
 
-        <div className="mx-auto w-full max-w-[1500px] px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-7 space-y-7">
-              <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/35 bg-amber-500/15 px-4 py-1 text-xs font-bold text-amber-950 dark:text-amber-200 backdrop-blur-md">
-                <Sparkles className="size-3.5 text-amber-500 animate-spin-slow" />
-                <span>Freshly Baked Daily in Kharadi · 100% Pure Eggless</span>
+        <div className="mx-auto w-full max-w-[1500px] px-3.5 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-7">
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/35 bg-amber-500/15 px-3.5 py-1 text-[11px] sm:text-xs font-bold text-amber-950 dark:text-amber-200 backdrop-blur-md max-w-full">
+                <Sparkles className="size-3.5 text-amber-500 shrink-0 animate-spin-slow" />
+                <span className="truncate">Freshly Baked Daily in Kharadi · 100% Pure Eggless</span>
               </div>
 
-              <h1 className="vault-serif-luxury text-3xl sm:text-4xl lg:text-[3.25rem] font-bold leading-[1.1] tracking-tight text-primary">
+              <h1 className="vault-serif-luxury text-2xl sm:text-4xl lg:text-[3.25rem] font-bold leading-[1.15] sm:leading-[1.1] tracking-tight text-primary">
                 Freshly Baked Every Morning.{" "}
-                <span className="block vault-handwritten text-2xl sm:text-3xl text-vault-rose font-normal mt-1">
+                <span className="block vault-handwritten text-xl sm:text-3xl text-vault-rose font-normal mt-1">
                   100% Pure Eggless Customised Cakes in Kharadi.
                 </span>
               </h1>
@@ -563,38 +563,38 @@ function IndexPage() {
                 preservatives.
               </p>
 
-              <div className="rounded-2xl border border-rose-500/30 bg-background/90 dark:bg-card/90 p-4 max-w-[620px] flex items-center gap-3.5 shadow-md backdrop-blur-md">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-vault-rose to-rose-700 text-white font-bold">
-                  <Heart className="size-5 fill-white" />
+              <div className="rounded-2xl border border-rose-500/30 bg-background/90 dark:bg-card/90 p-3.5 sm:p-4 max-w-[620px] flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-3.5 shadow-md backdrop-blur-md">
+                <span className="flex size-9 sm:size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-vault-rose to-rose-700 text-white font-bold">
+                  <Heart className="size-4.5 sm:size-5 fill-white" />
                 </span>
                 <div>
-                  <p className="vault-handwritten text-lg text-foreground/95 leading-snug">
+                  <p className="vault-handwritten text-base sm:text-lg text-foreground/95 leading-snug">
                     "A celebration cake should be genuine, fresh, and delicious. We bake every order
                     from scratch in our Kharadi studio."
                   </p>
-                  <p className="mt-1 text-[10px] font-bold text-vault-rose uppercase tracking-wider">
+                  <p className="mt-1 text-[9.5px] sm:text-[10px] font-bold text-vault-rose uppercase tracking-wider">
                     — Master Pastry Chef · Cake Crafts Kharadi
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2.5 pt-1">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-bold text-emerald-900 dark:text-emerald-300">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-0.5 sm:px-3.5 sm:py-1 text-[11px] sm:text-xs font-bold text-emerald-900 dark:text-emerald-300">
                   <ShieldCheck className="size-3.5 text-emerald-600 dark:text-emerald-400" /> 100%
                   Pure Eggless
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3.5 py-1 text-xs font-bold text-amber-900 dark:text-amber-300">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-0.5 sm:px-3.5 sm:py-1 text-[11px] sm:text-xs font-bold text-amber-900 dark:text-amber-300">
                   <Truck className="size-3.5 text-amber-500" /> Express Delivery in Kharadi
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1 text-xs font-bold text-rose-900 dark:text-rose-300">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/30 bg-rose-500/10 px-3 py-0.5 sm:px-3.5 sm:py-1 text-[11px] sm:text-xs font-bold text-rose-900 dark:text-rose-300">
                   <Star className="size-3.5 fill-rose-500 text-rose-500" /> Rated 4.9★ on Google
                 </span>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-2 w-full sm:w-auto">
                 <Button
                   asChild
-                  className="h-12 gap-2 rounded-xl px-7 text-xs font-extrabold bg-[#10B981] hover:bg-[#059669] text-white shadow-md btn-spring border-0"
+                  className="h-11 sm:h-12 gap-2 rounded-xl px-7 text-xs font-extrabold bg-[#10B981] hover:bg-[#059669] text-white shadow-md btn-spring border-0 w-full sm:w-auto justify-center"
                 >
                   <a
                     href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi ${BRAND_SHORT}, I would like to order or inquire about a custom cake!`)}`}
@@ -609,7 +609,7 @@ function IndexPage() {
                 <Button
                   variant="outline"
                   onClick={() => setCustomBuilderOpen(true)}
-                  className="h-12 gap-2 rounded-xl px-6 text-xs font-bold border-amber-600/35 bg-amber-500/10 text-amber-950 dark:text-amber-200 hover:bg-amber-600 hover:text-white transition-all backdrop-blur-xs btn-spring"
+                  className="h-11 sm:h-12 gap-2 rounded-xl px-6 text-xs font-bold border-amber-600/35 bg-amber-500/10 text-amber-950 dark:text-amber-200 hover:bg-amber-600 hover:text-white transition-all backdrop-blur-xs btn-spring w-full sm:w-auto justify-center"
                 >
                   <Wand2 className="size-4" /> Design Custom Cake
                 </Button>
@@ -617,15 +617,15 @@ function IndexPage() {
             </div>
 
             {/* Right Interactive 3D Revolving Showcase Card */}
-            <div className="lg:col-span-5 relative perspective-container">
-              <div className="rounded-3xl border border-amber-500/35 bg-card/90 backdrop-blur-md p-6 shadow-2xl card-3d glare-sweep relative overflow-hidden animate-swing-revolve">
+            <div className="lg:col-span-5 relative perspective-container mt-6 lg:mt-0">
+              <div className="rounded-3xl border border-amber-500/35 bg-card/90 backdrop-blur-md p-4 sm:p-6 shadow-2xl card-3d glare-sweep relative overflow-hidden animate-swing-revolve">
                 {/* Floating Flavor Chips around display */}
-                <div className="absolute top-12 right-4 z-20 pointer-events-none">
+                <div className="hidden sm:block absolute top-12 right-4 z-20 pointer-events-none">
                   <span className="rounded-full bg-black/75 text-amber-300 px-3 py-1 text-[10px] font-bold backdrop-blur-md shadow-lg border border-amber-400/30 animate-float-bubble">
                     🍫 70% Belgian Dark Cocoa
                   </span>
                 </div>
-                <div className="absolute bottom-20 left-4 z-20 pointer-events-none">
+                <div className="hidden sm:block absolute bottom-20 left-4 z-20 pointer-events-none">
                   <span className="rounded-full bg-black/75 text-rose-300 px-3 py-1 text-[10px] font-bold backdrop-blur-md shadow-lg border border-rose-400/30 animate-float-bubble delay-200">
                     🍪 Lotus Biscoff Speculoos Crunch
                   </span>
@@ -1024,12 +1024,12 @@ function IndexPage() {
             </div>
 
             {/* Category Filter Pills */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none border-t border-border/50 pt-3">
+            <div className="flex items-center gap-2 overflow-x-auto pb-1.5 no-scrollbar border-t border-border/50 pt-3 -mx-2 px-2 sm:mx-0 sm:px-0">
               {occasions.map((occ) => (
                 <button
                   key={occ}
                   onClick={() => setSelectedOccasion(occ)}
-                  className={`h-9.5 shrink-0 rounded-full px-4.5 text-xs font-bold transition-all btn-spring ${
+                  className={`h-9 shrink-0 rounded-full px-4 text-xs font-bold transition-all btn-spring ${
                     selectedOccasion === occ
                       ? "bg-vault-rose text-white shadow-md shadow-vault-rose/20 scale-102"
                       : "border border-border/70 bg-background/60 text-muted-foreground hover:bg-secondary hover:text-foreground"
@@ -1807,16 +1807,16 @@ function IndexPage() {
       </Dialog>
 
       {/* FLOATING QUICK ACTIONS (WHATSAPP HOTLINE & BACK TO TOP) */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5">
         {showBackToTop && (
           <Button
             variant="outline"
             size="icon"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="size-11 rounded-full border-border bg-background/90 text-foreground shadow-xl backdrop-blur-md hover:bg-secondary transition-all animate-bounce"
+            className="size-10 sm:size-11 rounded-full border-border bg-background/90 text-foreground shadow-xl backdrop-blur-md hover:bg-secondary transition-all animate-bounce"
             aria-label="Scroll back to top"
           >
-            <ArrowUp className="size-5" />
+            <ArrowUp className="size-4.5 sm:size-5" />
           </Button>
         )}
 
@@ -1824,7 +1824,7 @@ function IndexPage() {
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi ${BRAND_SHORT}, I would like to order or customize a cake!`)}`}
           target="_blank"
           rel="noreferrer"
-          className="group flex items-center gap-2.5 rounded-full bg-[#10B981] hover:bg-[#059669] px-5 py-3.5 text-xs font-extrabold text-white shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 ring-4 ring-emerald-500/20"
+          className="group flex items-center gap-2 rounded-full bg-[#10B981] hover:bg-[#059669] px-4 py-3 sm:px-5 sm:py-3.5 text-xs font-extrabold text-white shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 ring-4 ring-emerald-500/20"
         >
           <MessageSquare className="size-4 animate-pulse text-emerald-200" />
           <span className="font-extrabold tracking-wide">WhatsApp Order</span>

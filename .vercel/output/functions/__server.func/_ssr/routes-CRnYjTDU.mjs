@@ -6,7 +6,7 @@ import { C as ArrowRight, S as ArrowUp, _ as Clock, a as Sparkles, b as CakeSlic
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { a as DialogOverlay$1, i as DialogDescription$1, n as DialogClose, o as DialogPortal$1, r as DialogContent$1, s as DialogTitle$1, t as Dialog$1 } from "../_libs/@radix-ui/react-dialog+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BQe9NwGw.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CRnYjTDU.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var storefront_real_interior_default = "/assets/storefront-real-interior-C-7fd5Xn.jpg";
@@ -322,28 +322,28 @@ function IndexPage() {
 				style: { width: `${scrollProgress}%` }
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-				className: `sticky top-0 z-40 border-b transition-all duration-300 ${isScrolled ? "border-border/80 bg-background/95 backdrop-blur-md shadow-md py-3" : "border-border/40 bg-background/80 backdrop-blur-sm py-5 lg:py-6"}`,
+				className: `sticky top-0 z-40 border-b transition-all duration-300 ${isScrolled ? "border-border/80 bg-background/95 backdrop-blur-md shadow-md py-2.5 sm:py-3" : "border-border/40 bg-background/80 backdrop-blur-sm py-3 sm:py-5 lg:py-6"}`,
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mx-auto flex w-full max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8",
+					className: "mx-auto flex w-full max-w-[1600px] items-center justify-between px-3.5 sm:px-6 lg:px-8",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-4",
+							className: "flex items-center gap-3 sm:gap-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 								href: "#home",
-								className: "flex items-center gap-3 group",
+								className: "flex items-center gap-2.5 sm:gap-3 group",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "flex size-11 items-center justify-center rounded-2xl bg-gradient-to-br from-vault-rose to-rose-700 text-white shadow-lg transition-transform duration-300 group-hover:scale-105",
+									className: "flex size-9.5 sm:size-11 items-center justify-center rounded-xl sm:rounded-2xl bg-gradient-to-br from-vault-rose to-rose-700 text-white shadow-lg transition-transform duration-300 group-hover:scale-105",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CakeSlice, {
-										className: "size-6",
+										className: "size-5 sm:size-6",
 										strokeWidth: 2.2
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 									className: "flex flex-col leading-none",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "vault-serif-luxury text-[22px] sm:text-[24px] font-bold tracking-tight text-primary",
+										className: "vault-serif-luxury text-[19px] sm:text-[24px] font-bold tracking-tight text-primary",
 										children: BRAND_SHORT
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "mt-0.5 text-[9px] font-bold uppercase tracking-[0.25em] text-vault-rose truncate",
+										className: "mt-0.5 text-[8.5px] sm:text-[9px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-vault-rose truncate max-w-[200px] sm:max-w-none",
 										children: "100% Eggless Customised Cake Studio · Kharadi"
 									})]
 								})]
@@ -535,7 +535,7 @@ function IndexPage() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 				id: "home",
-				className: "relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 min-h-[85vh] flex items-center scroll-reveal-section",
+				className: "relative overflow-hidden pt-6 pb-12 sm:pt-16 sm:pb-20 lg:pt-24 lg:pb-32 min-h-0 lg:min-h-[85vh] flex items-center scroll-reveal-section",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "absolute inset-0 z-0 overflow-hidden",
 					children: [
@@ -549,23 +549,26 @@ function IndexPage() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background dark:from-[#140F0D]/40 dark:to-[#140F0D]" })
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mx-auto w-full max-w-[1500px] px-4 sm:px-6 lg:px-8 relative z-10",
+					className: "mx-auto w-full max-w-[1500px] px-3.5 sm:px-6 lg:px-8 relative z-10",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "grid lg:grid-cols-12 gap-10 lg:gap-14 items-center",
+						className: "grid lg:grid-cols-12 gap-8 lg:gap-14 items-center",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "lg:col-span-7 space-y-7",
+							className: "lg:col-span-7 space-y-5 sm:space-y-7",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "inline-flex items-center gap-2 rounded-full border border-amber-500/35 bg-amber-500/15 px-4 py-1 text-xs font-bold text-amber-950 dark:text-amber-200 backdrop-blur-md",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "size-3.5 text-amber-500 animate-spin-slow" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Freshly Baked Daily in Kharadi · 100% Pure Eggless" })]
+									className: "inline-flex items-center gap-2 rounded-full border border-amber-500/35 bg-amber-500/15 px-3.5 py-1 text-[11px] sm:text-xs font-bold text-amber-950 dark:text-amber-200 backdrop-blur-md max-w-full",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "size-3.5 text-amber-500 shrink-0 animate-spin-slow" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "truncate",
+										children: "Freshly Baked Daily in Kharadi · 100% Pure Eggless"
+									})]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-									className: "vault-serif-luxury text-3xl sm:text-4xl lg:text-[3.25rem] font-bold leading-[1.1] tracking-tight text-primary",
+									className: "vault-serif-luxury text-2xl sm:text-4xl lg:text-[3.25rem] font-bold leading-[1.15] sm:leading-[1.1] tracking-tight text-primary",
 									children: [
 										"Freshly Baked Every Morning.",
 										" ",
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "block vault-handwritten text-2xl sm:text-3xl text-vault-rose font-normal mt-1",
+											className: "block vault-handwritten text-xl sm:text-3xl text-vault-rose font-normal mt-1",
 											children: "100% Pure Eggless Customised Cakes in Kharadi."
 										})
 									]
@@ -579,40 +582,40 @@ function IndexPage() {
 									]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "rounded-2xl border border-rose-500/30 bg-background/90 dark:bg-card/90 p-4 max-w-[620px] flex items-center gap-3.5 shadow-md backdrop-blur-md",
+									className: "rounded-2xl border border-rose-500/30 bg-background/90 dark:bg-card/90 p-3.5 sm:p-4 max-w-[620px] flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-3.5 shadow-md backdrop-blur-md",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "flex size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-vault-rose to-rose-700 text-white font-bold",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heart, { className: "size-5 fill-white" })
+										className: "flex size-9 sm:size-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-vault-rose to-rose-700 text-white font-bold",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Heart, { className: "size-4.5 sm:size-5 fill-white" })
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "vault-handwritten text-lg text-foreground/95 leading-snug",
+										className: "vault-handwritten text-base sm:text-lg text-foreground/95 leading-snug",
 										children: "\"A celebration cake should be genuine, fresh, and delicious. We bake every order from scratch in our Kharadi studio.\""
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "mt-1 text-[10px] font-bold text-vault-rose uppercase tracking-wider",
+										className: "mt-1 text-[9.5px] sm:text-[10px] font-bold text-vault-rose uppercase tracking-wider",
 										children: "— Master Pastry Chef · Cake Crafts Kharadi"
 									})] })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex flex-wrap items-center gap-2.5 pt-1",
+									className: "flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-bold text-emerald-900 dark:text-emerald-300",
+											className: "inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-0.5 sm:px-3.5 sm:py-1 text-[11px] sm:text-xs font-bold text-emerald-900 dark:text-emerald-300",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "size-3.5 text-emerald-600 dark:text-emerald-400" }), " 100% Pure Eggless"]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3.5 py-1 text-xs font-bold text-amber-900 dark:text-amber-300",
+											className: "inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-0.5 sm:px-3.5 sm:py-1 text-[11px] sm:text-xs font-bold text-amber-900 dark:text-amber-300",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Truck, { className: "size-3.5 text-amber-500" }), " Express Delivery in Kharadi"]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "inline-flex items-center gap-1.5 rounded-full border border-rose-500/30 bg-rose-500/10 px-3.5 py-1 text-xs font-bold text-rose-900 dark:text-rose-300",
+											className: "inline-flex items-center gap-1.5 rounded-full border border-rose-500/30 bg-rose-500/10 px-3 py-0.5 sm:px-3.5 sm:py-1 text-[11px] sm:text-xs font-bold text-rose-900 dark:text-rose-300",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "size-3.5 fill-rose-500 text-rose-500" }), " Rated 4.9★ on Google"]
 										})
 									]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex flex-wrap items-center gap-3 pt-2",
+									className: "flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-2 w-full sm:w-auto",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 										asChild: true,
-										className: "h-12 gap-2 rounded-xl px-7 text-xs font-extrabold bg-[#10B981] hover:bg-[#059669] text-white shadow-md btn-spring border-0",
+										className: "h-11 sm:h-12 gap-2 rounded-xl px-7 text-xs font-extrabold bg-[#10B981] hover:bg-[#059669] text-white shadow-md btn-spring border-0 w-full sm:w-auto justify-center",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 											href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi ${BRAND_SHORT}, I would like to order or inquire about a custom cake!`)}`,
 											target: "_blank",
@@ -623,25 +626,25 @@ function IndexPage() {
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
 										variant: "outline",
 										onClick: () => setCustomBuilderOpen(true),
-										className: "h-12 gap-2 rounded-xl px-6 text-xs font-bold border-amber-600/35 bg-amber-500/10 text-amber-950 dark:text-amber-200 hover:bg-amber-600 hover:text-white transition-all backdrop-blur-xs btn-spring",
+										className: "h-11 sm:h-12 gap-2 rounded-xl px-6 text-xs font-bold border-amber-600/35 bg-amber-500/10 text-amber-950 dark:text-amber-200 hover:bg-amber-600 hover:text-white transition-all backdrop-blur-xs btn-spring w-full sm:w-auto justify-center",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(WandSparkles, { className: "size-4" }), " Design Custom Cake"]
 									})]
 								})
 							]
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "lg:col-span-5 relative perspective-container",
+							className: "lg:col-span-5 relative perspective-container mt-6 lg:mt-0",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "rounded-3xl border border-amber-500/35 bg-card/90 backdrop-blur-md p-6 shadow-2xl card-3d glare-sweep relative overflow-hidden animate-swing-revolve",
+								className: "rounded-3xl border border-amber-500/35 bg-card/90 backdrop-blur-md p-4 sm:p-6 shadow-2xl card-3d glare-sweep relative overflow-hidden animate-swing-revolve",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "absolute top-12 right-4 z-20 pointer-events-none",
+										className: "hidden sm:block absolute top-12 right-4 z-20 pointer-events-none",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: "rounded-full bg-black/75 text-amber-300 px-3 py-1 text-[10px] font-bold backdrop-blur-md shadow-lg border border-amber-400/30 animate-float-bubble",
 											children: "🍫 70% Belgian Dark Cocoa"
 										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "absolute bottom-20 left-4 z-20 pointer-events-none",
+										className: "hidden sm:block absolute bottom-20 left-4 z-20 pointer-events-none",
 										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: "rounded-full bg-black/75 text-rose-300 px-3 py-1 text-[10px] font-bold backdrop-blur-md shadow-lg border border-rose-400/30 animate-float-bubble delay-200",
 											children: "🍪 Lotus Biscoff Speculoos Crunch"
@@ -1070,10 +1073,10 @@ function IndexPage() {
 									})]
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none border-t border-border/50 pt-3",
+								className: "flex items-center gap-2 overflow-x-auto pb-1.5 no-scrollbar border-t border-border/50 pt-3 -mx-2 px-2 sm:mx-0 sm:px-0",
 								children: occasions.map((occ) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 									onClick: () => setSelectedOccasion(occ),
-									className: `h-9.5 shrink-0 rounded-full px-4.5 text-xs font-bold transition-all btn-spring ${selectedOccasion === occ ? "bg-vault-rose text-white shadow-md shadow-vault-rose/20 scale-102" : "border border-border/70 bg-background/60 text-muted-foreground hover:bg-secondary hover:text-foreground"}`,
+									className: `h-9 shrink-0 rounded-full px-4 text-xs font-bold transition-all btn-spring ${selectedOccasion === occ ? "bg-vault-rose text-white shadow-md shadow-vault-rose/20 scale-102" : "border border-border/70 bg-background/60 text-muted-foreground hover:bg-secondary hover:text-foreground"}`,
 									children: occ
 								}, occ))
 							})]
@@ -1812,7 +1815,7 @@ function IndexPage() {
 				})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3",
+				className: "fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5",
 				children: [showBackToTop && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 					variant: "outline",
 					size: "icon",
@@ -1820,14 +1823,14 @@ function IndexPage() {
 						top: 0,
 						behavior: "smooth"
 					}),
-					className: "size-11 rounded-full border-border bg-background/90 text-foreground shadow-xl backdrop-blur-md hover:bg-secondary transition-all animate-bounce",
+					className: "size-10 sm:size-11 rounded-full border-border bg-background/90 text-foreground shadow-xl backdrop-blur-md hover:bg-secondary transition-all animate-bounce",
 					"aria-label": "Scroll back to top",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUp, { className: "size-5" })
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUp, { className: "size-4.5 sm:size-5" })
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 					href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi ${BRAND_SHORT}, I would like to order or customize a cake!`)}`,
 					target: "_blank",
 					rel: "noreferrer",
-					className: "group flex items-center gap-2.5 rounded-full bg-[#10B981] hover:bg-[#059669] px-5 py-3.5 text-xs font-extrabold text-white shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 ring-4 ring-emerald-500/20",
+					className: "group flex items-center gap-2 rounded-full bg-[#10B981] hover:bg-[#059669] px-4 py-3 sm:px-5 sm:py-3.5 text-xs font-extrabold text-white shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 ring-4 ring-emerald-500/20",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageSquare, { className: "size-4 animate-pulse text-emerald-200" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-extrabold tracking-wide",
 						children: "WhatsApp Order"
